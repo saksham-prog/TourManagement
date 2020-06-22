@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { DataService } from '../data.service';
 
@@ -11,6 +11,13 @@ export class LoginComponent implements OnInit {
 
   emailProp;
   passwordProp;
+  nameProp;
+  mobileProp;
+  emailPropsu;
+  passwordPropsu;
+  
+  @ViewChild('signUPForm') signupelement;
+  @ViewChild('loginForm')  loginelement;
   constructor( private router:Router, private ds:DataService ) { }
 
   ngOnInit(): void {
@@ -38,5 +45,44 @@ export class LoginComponent implements OnInit {
       }
     })
   }
+
+  showLogin()
+  {
+      this.loginelement.nativeElement.style.display="block"
+      
+      this.signupelement.nativeElement.style.display="none"
+  }
+  showSignup()
+  {
+    console.log(this.signupelement);
+    console.log(this.loginelement);
+    this.signupelement.nativeElement.style.display="block";
+    this.loginelement.nativeElement.style.display="none"
+      
+    
+  }
+
+  
+  signUp()
+  {
+      this.ds.signUp({name:this.nameProp, email:this.emailProp, password:this.passwordProp, mobile:this.mobileProp})
+      .subscribe((response)=>{
+        if(response.status=="ok")
+        {
+          
+       
+
+          alert('registration successfull you will be redirected to login');
+          this.router.navigate(['/login']);
+
+
+        }
+        else
+        {
+          alert("email id already in use registered by different email id");
+        }
+      })
+  }
+
 
 }
