@@ -23,3 +23,11 @@ img {
     top: -40px;
     left: calc(50% - 50px);
 }
+
+.signupForm{
+    display: none;
+}
+
+.loginForm{
+    display: block;
+}
