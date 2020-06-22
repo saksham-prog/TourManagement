@@ -18,7 +18,7 @@ const routes: Routes = [
     {path:'login', component:LoginComponent},
     {path:'signup', component:SignUpComponent}
   ]},
-  {path:'dashboard', component:dashboardComponent, canActivate:[AuthGuard] }
+  {path:'dashboard', component:dashboardComponent, canActivate:[AuthGuard]}
 
 ];
 
