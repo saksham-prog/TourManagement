@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, ɵSWITCH_COMPILE_NGMODULE__POST_R3__ } from '@angular/core';
 import { Router } from '@angular/router';
 import { DataService } from '../data.service';
 
@@ -13,8 +13,8 @@ export class LoginComponent implements OnInit {
   passwordProp;
   nameProp;
   mobileProp;
-  emailPropsu;
-  passwordPropsu;
+  // emailPropsu;
+  // passwordPropsu;
   
   @ViewChild('signUPForm') signupelement;
   @ViewChild('loginForm')  loginelement;
@@ -31,10 +31,11 @@ export class LoginComponent implements OnInit {
       
     this.ds.signIn({ email:this.emailProp, password:this.passwordProp})
     .subscribe((response)=>{
+      alert("hello");
       alert(JSON.stringify(response));
       if(response.status=="ok")
       {
-        
+         
         localStorage.setItem('name', response.data[0].name);          
         localStorage.setItem('email', response.data[0].email);
         this.router.navigate(['/dashboard']);
@@ -44,6 +45,8 @@ export class LoginComponent implements OnInit {
         alert("undefined arguments");
       }
     })
+
+   
   }
 
   showLogin()
@@ -57,32 +60,35 @@ export class LoginComponent implements OnInit {
     console.log(this.signupelement);
     console.log(this.loginelement);
     this.signupelement.nativeElement.style.display="block";
+
     this.loginelement.nativeElement.style.display="none"
       
     
   }
-
   
-  signUp()
-  {
-      this.ds.signUp({name:this.nameProp, email:this.emailProp, password:this.passwordProp, mobile:this.mobileProp})
-      .subscribe((response)=>{
-        if(response.status=="ok")
-        {
-          
-       
+ SignUp()
+ {
+  this.ds.signUp({name:this.nameProp, email:this.emailProp, password:this.passwordProp, mobile:this.mobileProp})
+  .subscribe((response)=>{
+    if(response.status=="ok")
+    {
+      
+   
 
-          alert('registration successfull you will be redirected to login');
-          this.router.navigate(['/login']);
+      alert('registration successfull you will be redirected to login');
+      this.router.navigate(['/login']);
 
 
-        }
-        else
-        {
-          alert("email id already in use registered by different email id");
-        }
-      })
-  }
+    }
+    else
+    {
+      alert("email id already in use registered by different email id");
+    }
+  })
+}
 
 
 }
+
+  
+  
