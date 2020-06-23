@@ -4,9 +4,7 @@ const cors = require('cors');
 const MongoClient = require('mongodb').MongoClient;
 const ObjectId = require('mongodb').ObjectId;
 
-var dbName = "sampledb"
-
-// var client = new MongoClient( 'mongodb://localhost:27017/mypro', {useNewUrlParser:true});
+var dbName = "tourdb"
 var client = new MongoClient('mongodb+srv://admin:admin@cluster0-h4v6l.mongodb.net/dbname?retryWrites=true&w=majority', { useNewUrlParser: true });
 
 
@@ -46,7 +44,7 @@ app.get('/user', (req, res) => {
 
 app.post('/sign-in', bodyParser.json(), (req, res) => {
 
-
+    console.log(req, body)
     var collection = connection.db(dbName).collection('users');
     if (res, body) {
 

@@ -1,69 +1,61 @@
 <div class="container">
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
- <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
 
                 <div class="modal-header">
-                    <img src="../../assets/images/login2.jpg" width="80px" height="80px " alt="">
+                    <img src="../../assets/images/login.jpg" width="80px" height="80px " alt="">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
 
                 </div>
-                <div  class="modal-body">
+                <div class="modal-body">
 
-                    <div #loginForm   class="loginForm" >
-                    <form #f="ngForm">
-                        <div class="form-group">
-                            <!-- <label for="email">Email address:</label> -->
-                            <input #emailref="ngModel" [(ngModel)]="emailProp" name="email" type="email" class="form-control" placeholder="Enter email" id="email">
-                        </div>
-                        <div class="form-group">
-                            <!-- <label for="pwd">Password:</label> -->
-                            <input #passref="ngModel" [(ngModel)]="passwordProp" name="password" type="password" class="form-control" placeholder="Enter password" id="pwd">
-                        </div>
-                        <p></p>
-                        <button type="submit" class="btn btn-dark">LogIn</button>
-                        <label>  New User? <a  class="btn btn-primary btn-sm" (click)="showSignup()"  >SignUp</a></label>
-                    </form>
-                </div>
+                    <div #loginForm class="loginForm">
+                        <form #f="ngForm">
+                            <div class="form-group">
+                                <!-- <label for="email">Email address:</label> -->
+                                <input #emailref="ngModel" [(ngModel)]="emailProp" name="email" type="email" class="form-control" placeholder="Enter email" id="email">
+                            </div>
+                            <div class="form-group">
+                                <!-- <label for="pwd">Password:</label> -->
+                                <input #passref="ngModel" [(ngModel)]="passwordProp" name="password" type="password" class="form-control" placeholder="Enter password" id="pwd">
+                            </div>
+                            <p></p>
+                            <button type="submit" class="btn btn-dark" (click)="login()">LogIn</button>
+                            <label>  New User? <a  class="btn btn-primary btn-sm" (click)="showSignup()" >SignUp</a></label>
+                        </form>
+                    </div>
 
 
-                <div #signUPForm  class="signupForm">
-                    <form #f="ngForm">
-                        <div class="form-group">
-                
-                            <input #nameref="ngModel" [(ngModel)]="nameProp" name="name" type="text" class="form-control" placeholder="Enter name" id="name">
-                            <input #mobileref="ngModel" [(ngModel)]="mobileProp" name="mobile" type="text" class="form-control" placeholder="Enter mobile number" id="mobile">
-                        </div>
-                        <div class="form-group">
-                
-                            <input #emailrefsu="ngModel" [(ngModel)]="emailPropsu" name="email" type="email" class="form-control" placeholder="Enter email" id="email">
-                        </div>
-                        <div class="form-group">
-                
-                            <input #passrefsu="ngModel" [(ngModel)]="passwordPropsu" name="password" type="password" class="form-control" placeholder="Enter password" id="pwd">
-                        </div>
-                        <p></p>
-                        <button type="submit" class="btn btn-dark" (click)="signUp()">Submit</button>
-                        <label>  Already Registered? <a   class="btn btn-primary btn-sm" (click)="showLogin()" >Login</a></label>
-                    
-                    </form>
-                </div>
+                    <div #signUPForm class="signupForm">
+                        <form #f="ngForm">
+                            <div class="form-group">
+
+                                <input #nameref="ngModel" [(ngModel)]="nameProp" name="name" type="text" class="form-control" placeholder="Enter name" id="name">
+
+                            </div>
+                            <div class="form-group">
+
+
+                                <input #mobileref="ngModel" [(ngModel)]="mobileProp" name="mobile" type="text" class="form-control" placeholder="Enter mobile number" id="mobile">
+                            </div>
+                            <div class="form-group">
+
+                                <input #emailrefsu="ngModel" [(ngModel)]="emailPropsu" name="email" type="email" class="form-control" placeholder="Enter email" id="email">
+                            </div>
+                            <div class="form-group">
+
+                                <input #passrefsu="ngModel" [(ngModel)]="passwordPropsu" name="password" type="password" class="form-control" placeholder="Enter password" id="pwd">
+                            </div>
+                            <p></p>
+                            <button type="submit" class="btn btn-dark" (click)="SignUp()">Submit</button>
+                            <label>  Already Registered? <a   class="btn btn-primary btn-sm" (click)="showLogin()" >Login</a></label>
+
+                        </form>
+                    </div>
 
                 </div>
 

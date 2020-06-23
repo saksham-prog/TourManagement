@@ -13,9 +13,9 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { LoginComponent } from './login/login.component';
 import { BodyComponent } from './body/body.component';
-import { SignUpComponent } from './sign-up/sign-up.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +30,7 @@ import { HttpClientModule } from '@angular/common/http';
     AboutComponent,
     LoginComponent,
     BodyComponent,
-    SignUpComponent
+    ContactComponent
   ],
   imports: [
     BrowserModule,
