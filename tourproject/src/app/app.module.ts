@@ -16,6 +16,8 @@ import { BodyComponent } from './body/body.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ContactComponent } from './contact/contact.component';
+import { ChooseComponent } from './choose/choose.component';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { ContactComponent } from './contact/contact.component';
     AboutComponent,
     LoginComponent,
     BodyComponent,
-    ContactComponent
+    ContactComponent,
+    ChooseComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,

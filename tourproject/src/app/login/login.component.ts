@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
          
         localStorage.setItem('name', response.data[0].name);          
         localStorage.setItem('email', response.data[0].email);
-        var win:any = window
+        
         
         this.closebtn.nativeElement.click();
          this.router.navigate(['/dashboard']);

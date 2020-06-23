@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { WebpageComponent } from './webpage/webpage.component';
 import { HomeComponent } from './home/home.component';
@@ -15,6 +15,7 @@ import { IndiagateComponent } from './indiagate/indiagate.component';
 import { GoaComponent } from './goa/goa.component';
 import { GtempleComponent } from './gtemple/gtemple.component';
 import { InnerAboutComponent } from './inner-about/inner-about.component';
+import { ChooseComponent } from './choose/choose.component';
 
 
 
@@ -33,6 +34,9 @@ const routes: Routes = [
    
   ]},
   {path:'about', component:AboutComponent},
+  {path:'choose', component:ChooseComponent, children:[
+    {path:'webpage', component:WebpageComponent}
+  ]},
   
 
   {path:'dashboard', component:dashboardComponent, canActivate:[AuthGuard]}
