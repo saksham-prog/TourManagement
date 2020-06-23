@@ -13,8 +13,8 @@ export class LoginComponent implements OnInit {
   passwordProp;
   nameProp;
   mobileProp;
-  emailPropsu;
-  passwordPropsu;
+  // emailPropsu;
+  // passwordPropsu;
   
   @ViewChild('signUPForm') signupelement;
   @ViewChild('loginForm')  loginelement;

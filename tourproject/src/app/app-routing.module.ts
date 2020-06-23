@@ -22,7 +22,6 @@ const routes: Routes = [
   {path:'', component:WebpageComponent , children:[
 
     {path:'home', component:HomeComponent},
-   
     {path:'contact', component:ContactComponent},
     {path:'login', component:LoginComponent},
     {path:'tajmahal', component:TajmahalComponent},

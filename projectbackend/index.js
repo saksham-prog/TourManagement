@@ -44,7 +44,7 @@ app.get('/user', (req, res) => {
 
 app.post('/sign-in', bodyParser.json(), (req, res) => {
 
-    console.log(req, body)
+    console.log(req.body)
     var collection = connection.db(dbName).collection('users');
     if (res, body) {
 
