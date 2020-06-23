@@ -18,6 +18,7 @@ export class LoginComponent implements OnInit {
   
   @ViewChild('signUPForm') signupelement;
   @ViewChild('loginForm')  loginelement;
+  @ViewChild('mclose') closebtn;
   constructor( private router:Router, private ds:DataService ) { }
 
   ngOnInit(): void {
@@ -38,7 +39,10 @@ export class LoginComponent implements OnInit {
          
         localStorage.setItem('name', response.data[0].name);          
         localStorage.setItem('email', response.data[0].email);
-        this.router.navigate(['/dashboard']);
+        var win:any = window
+        
+        this.closebtn.nativeElement.click();
+         this.router.navigate(['/dashboard']);
 
       }
       else{
