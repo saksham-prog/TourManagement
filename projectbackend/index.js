@@ -44,20 +44,20 @@ app.get('/user', (req, res) => {
 
 app.post('/sign-in', bodyParser.json(), (req, res) => {
 
-    console.log(req, body)
+    console.log(req.body)
     var collection = connection.db(dbName).collection('users');
-    if (res, body) {
+   
 
         collection.find(req.body).toArray((err, docs) => {
+            console.log("docs found");
+            console.log(docs);
             if (!err && docs.length > 0) {
                 res.send({ status: "ok", data: docs });
             } else {
                 res.send({ status: "failed", data: err });
             }
         })
-    } else {
-        res.send({ status: "failed", data: err });
-    }
+   
 })
 
 
