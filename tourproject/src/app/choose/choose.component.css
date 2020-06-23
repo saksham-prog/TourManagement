@@ -4,6 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background: black;
     min-height: 100vh;
     font-style: italic;
 }
