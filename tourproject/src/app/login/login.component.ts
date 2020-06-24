@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild, ɵSWITCH_COMPILE_NGMODULE__POST_R3__ } from '@angular/core';
 import { Router } from '@angular/router';
 import { DataService } from '../data.service';
+import { AdminComponent } from '../admin/admin.component';
 
 @Component({
   selector: 'app-login',
@@ -19,6 +20,7 @@ export class LoginComponent implements OnInit {
   @ViewChild('signUPForm') signupelement;
   @ViewChild('loginForm')  loginelement;
   @ViewChild('mclose') closebtn;
+  @ViewChild('choose') chooseelement;
   constructor( private router:Router, private ds:DataService ) { }
 
   ngOnInit(): void {
@@ -52,9 +54,14 @@ export class LoginComponent implements OnInit {
 
    
   }
-
+  chooselogin(){
+  this.chooseelement.nativeElement.click(); 
+  this.signupelement.nativeElement.style.display="block"
+  this.loginelement.nativeElement.style.display="block"
+  }
   showLogin()
   {
+    
       this.loginelement.nativeElement.style.display="block"
       
       this.signupelement.nativeElement.style.display="none"
@@ -94,5 +101,3 @@ export class LoginComponent implements OnInit {
 
 }
 
-  
-  
