@@ -16,6 +16,7 @@ import { BodyComponent } from './body/body.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ContactComponent } from './contact/contact.component';
+import { DashbodyComponent } from './dashbody/dashbody.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ContactComponent } from './contact/contact.component';
     AboutComponent,
     LoginComponent,
     BodyComponent,
-    ContactComponent
+    ContactComponent,
+    DashbodyComponent
   ],
   imports: [
     BrowserModule,
