@@ -44,6 +44,7 @@ export class LoginComponent implements OnInit {
          
         localStorage.setItem('name', response.data[0].name);          
         localStorage.setItem('email', response.data[0].email);
+        localStorage.setItem('role', response.data[0].role);
         
         
         this.closebtn.nativeElement.click();
@@ -82,7 +83,7 @@ export class LoginComponent implements OnInit {
   
  SignUp()
  {
-  this.ds.signUp({name:this.nameProp, email:this.emailProp, password:this.passwordProp, mobile:this.mobileProp})
+  this.ds.signUp({role:"user", name:this.nameProp, email:this.emailPropsu, password:this.passwordPropsu, mobile:this.mobileProp})
   .subscribe((response)=>{
     if(response.status=="ok")
     {
