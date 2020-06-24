@@ -16,19 +16,21 @@
                         <a class="btn btn-success " (click)="chooselogin()">users</a>
                         <a class="btn btn-warning " (click)="chooselogin()">admin</a>
                     </div>
-                    <!-- <div class="admin">
-                        <div class="form-group">
+                    <div class="admin">
+                        <form #f="ngForm">
+                            <div class="form-group">
 
-                            <input #namereftu="ngModel" [(ngModel)]="nameProptu" name="name" type="text" class="form-control" placeholder="Enter name" id="name">
+                                <input #namereftu="ngModel" [(ngModel)]="nameProptu" name="name" type="text" class="form-control" placeholder="Enter name" id="name">
 
-                        </div>
-                        <div class="form-group">
-                            <input #adminIdreftu="ngModel" [(ngModel)]="AdminIdProptu" name="AdminId" type="AdminId" class="form-control" placeholder="Enter AdminId " id="AdminId">
-                        </div>
-                        <div class="form-group">
-                            <input #passwordreftu="ngModel" [(ngModel)]="passwordProptu" name="passwordId" type="password" class="form-control" placeholder="Enter password " id="password">
-                        </div>
-                    </div> -->
+                            </div>
+                            <div class="form-group">
+                                <input #adminIdreftu="ngModel" [(ngModel)]="AdminIdProptu" name="AdminId" type="AdminId" class="form-control" placeholder="Enter AdminId " id="AdminId">
+                            </div>
+                            <div class="form-group">
+                                <input #passwordreftu="ngModel" [(ngModel)]="passwordProptu" name="passwordId" type="password" class="form-control" placeholder="Enter password " id="password">
+                            </div>
+                        </form>
+                    </div>
                     <div #loginForm class="loginForm">
                         <form #f="ngForm">
                             <div class="form-group">

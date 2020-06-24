@@ -16,6 +16,9 @@ export class LoginComponent implements OnInit {
   mobileProp;
   emailPropsu;
   passwordPropsu;
+  nameProptu;
+  AdminIdProptu;
+  passwordProptu;
   
   @ViewChild('signUPForm') signupelement;
   @ViewChild('loginForm')  loginelement;
