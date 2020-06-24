@@ -16,6 +16,7 @@ import { GoaComponent } from './goa/goa.component';
 import { GtempleComponent } from './gtemple/gtemple.component';
 import { InnerAboutComponent } from './inner-about/inner-about.component';
 import { ChooseComponent } from './choose/choose.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 
 
 
@@ -34,12 +35,9 @@ const routes: Routes = [
    
   ]},
   {path:'about', component:AboutComponent},
-  {path:'choose', component:ChooseComponent, children:[
-    {path:'webpage', component:WebpageComponent}
-  ]},
-  
+  {path:'dashboard', component:dashboardComponent, canActivate:[AuthGuard]},
+  {path:'admin-dashboard', component:AdminDashboardComponent, canActivate:[AuthGuard]}
 
-  {path:'dashboard', component:dashboardComponent, canActivate:[AuthGuard]}
 
 ];
 

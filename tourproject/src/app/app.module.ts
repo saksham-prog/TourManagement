@@ -18,6 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ContactComponent } from './contact/contact.component';
 import { ChooseComponent } from './choose/choose.component';
 import { AdminComponent } from './admin/admin.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { AdminComponent } from './admin/admin.component';
     BodyComponent,
     ContactComponent,
     ChooseComponent,
-    AdminComponent
+    AdminComponent,
+    AdminDashboardComponent
   ],
   imports: [
     BrowserModule,
