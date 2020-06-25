@@ -24,7 +24,7 @@ import { HimalayaComponent } from './himalaya/himalaya.component';
 import { DallakeComponent } from './dallake/dallake.component';
 import { FlowersComponent } from './flowers/flowers.component';
 import { AndamanComponent } from './andaman/andaman.component';
-
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 
 
 const routes: Routes = [
@@ -40,6 +40,7 @@ const routes: Routes = [
     {path:'gtemple', component:GtempleComponent},
     {path:'banaras', component:BanarasComponent}
   ]},
+
   {path:'about', component:AboutComponent},
   {path:'choose', component:ChooseComponent, children:[
     {path:'webpage', component:WebpageComponent}
@@ -56,9 +57,12 @@ const routes: Routes = [
     {path:'dallake', component:DallakeComponent},
     {path:'flowers', component:FlowersComponent},
     {path:'andaman', component:AndamanComponent}
-  ]}
+  ]},
+
+  {path:'admin-dashboard', component:AdminDashboardComponent, canActivate:[AuthGuard]}
 
   ];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

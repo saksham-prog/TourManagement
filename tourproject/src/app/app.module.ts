@@ -27,6 +27,8 @@ import { UdaipurComponent } from './udaipur/udaipur.component';
 import { FlowersComponent } from './flowers/flowers.component';
 import { KasolComponent } from './kasol/kasol.component';
 import { HimalayaComponent } from './himalaya/himalaya.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+
 
 @NgModule({
   declarations: [
@@ -51,7 +53,11 @@ import { HimalayaComponent } from './himalaya/himalaya.component';
     UdaipurComponent,
     FlowersComponent,
     KasolComponent,
-    HimalayaComponent
+    HimalayaComponent,
+    ChooseComponent,
+    AdminComponent,
+    AdminDashboardComponent
+
   ],
   imports: [
     BrowserModule,
