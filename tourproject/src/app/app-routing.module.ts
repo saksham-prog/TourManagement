@@ -31,7 +31,6 @@ const routes: Routes = [
   {path:'', component:WebpageComponent , children:[
 
     {path:'home', component:HomeComponent},
-    {path:'contact', component:ContactComponent},
     {path:'login', component:LoginComponent},
     {path:'tajmahal', component:TajmahalComponent},
     {path:'qutub', component:QutubComponent},
@@ -59,6 +58,9 @@ const routes: Routes = [
     {path:'andaman', component:AndamanComponent}
   ]},
 
+
+  {path:'contact', component:ContactComponent},
+  {path:'dashboard', component:dashboardComponent, canActivate:[AuthGuard]},
   {path:'admin-dashboard', component:AdminDashboardComponent, canActivate:[AuthGuard]}
 
   ];

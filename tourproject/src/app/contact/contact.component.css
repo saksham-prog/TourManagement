@@ -1,0 +1,37 @@
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: red;
+    font-size: 50px;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-bottom: 10%;
+}
+
+section {
+    padding: 0 100px;
+    background: url(../../assets/images/background.jpg);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    position: relative;
+    max-width: 100%;
+    padding: 50px;
+    background: transparent;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    border: 2px solid rgb(34, 44, 51);
+    transition: 0.25s
+}
+
+
+/* p {
+    color: black;
+    font-size: 17px;
+} */
