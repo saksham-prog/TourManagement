@@ -20,11 +20,11 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 
 
 
+
 const routes: Routes = [
   {path:'', component:WebpageComponent , children:[
 
     {path:'home', component:HomeComponent},
-    {path:'contact', component:ContactComponent},
     {path:'login', component:LoginComponent},
     {path:'tajmahal', component:TajmahalComponent},
     {path:'banaras' , component:BanarasComponent},
@@ -35,6 +35,7 @@ const routes: Routes = [
    
   ]},
   {path:'about', component:AboutComponent},
+  {path:'contact', component:ContactComponent},
   {path:'dashboard', component:dashboardComponent, canActivate:[AuthGuard]},
   {path:'admin-dashboard', component:AdminDashboardComponent, canActivate:[AuthGuard]}
 

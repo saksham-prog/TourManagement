@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-admin-dashboard',
@@ -8,17 +10,22 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class AdminDashboardComponent implements OnInit {
 
-  name;
-  email;
-  constructor( private route: ActivatedRoute ) { }
+  // name;
+  // email;
+  constructor( private router: Router ) { }
 
   ngOnInit(): void {
 
-    this.email=localStorage.getItem('email')
-    // this.route.queryParamMap.subscribe((d)=>{
-    //     this.name = d.get('name');
-    // })
-    this.name=localStorage.getItem('name');
+    // this.email=localStorage.getItem('email')
+    // // this.route.queryParamMap.subscribe((d)=>{
+    // //     this.name = d.get('name');
+    // // })
+    // this.name=localStorage.getItem('name');
   }
-
+  logout()
+  {
+    localStorage.removeItem("email");
+    localStorage.removeItem('name')
+    this.router.navigate(['/']);
+  }
 }
