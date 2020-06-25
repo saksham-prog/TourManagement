@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { WebpageComponent } from './webpage/webpage.component';
 import { HomeComponent } from './home/home.component';
@@ -14,7 +14,16 @@ import { InnerAboutComponent } from './inner-about/inner-about.component';
 import { QutubComponent } from './qutub/qutub.component';
 import { ContactComponent } from './contact/contact.component';
 import { BanarasComponent } from './banaras/banaras.component';
-
+import { ChooseComponent } from './choose/choose.component';
+import { GoaaComponent } from './goaa/goaa.component';
+import { OotyComponent } from './ooty/ooty.component';
+import { UdaipurComponent } from './udaipur/udaipur.component';
+import { KasolComponent } from './kasol/kasol.component';
+import { LehComponent } from './leh/leh.component';
+import { HimalayaComponent } from './himalaya/himalaya.component';
+import { DallakeComponent } from './dallake/dallake.component';
+import { FlowersComponent } from './flowers/flowers.component';
+import { AndamanComponent } from './andaman/andaman.component';
 
 
 
@@ -32,7 +41,22 @@ const routes: Routes = [
     {path:'banaras', component:BanarasComponent}
   ]},
   {path:'about', component:AboutComponent},
-  {path:'dashboard', component:dashboardComponent, canActivate:[AuthGuard]}
+  {path:'choose', component:ChooseComponent, children:[
+    {path:'webpage', component:WebpageComponent}
+  ]},
+  
+  {path:'dashboard', component:dashboardComponent, canActivate:[AuthGuard], children:[
+    
+    {path:'goaa', component:GoaaComponent},
+    {path:'ooty', component:OotyComponent},
+    {path:'udaipur', component:UdaipurComponent},
+    {path:'kasol', component:KasolComponent},
+    {path:'leh', component:LehComponent},
+    {path:'himalaya', component:HimalayaComponent},
+    {path:'dallake', component:DallakeComponent},
+    {path:'flowers', component:FlowersComponent},
+    {path:'andaman', component:AndamanComponent}
+  ]}
 
   ];
 
