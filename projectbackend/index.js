@@ -115,6 +115,33 @@ app.post('/submit', bodyParser.json(), (req, res) => {
     })
 
 })
+app.post('/add', bodyParser.json(), (req, res) => {
+
+    console.log("sign up for user..")
+    console.log(req.body);
+
+    var collection = connection.db(dbName).collection('form');
+
+    collection.find({ email: req.body.email }).toArray((err, docs) => {
+        console.log("found with this email ");
+        console.log(docs);
+
+        if (!err && docs.length > 0) {
+            res.send({ status: "failed", data: "email already Exist" })
+        } else {
+
+            collection.insert(req.body, (err, result) => {
+                if (!err) {
+                    res.send({ status: "ok", data: "signup success" });
+                } else {
+                    res.send({ status: "failed", data: err });
+                }
+            })
+
+        }
+    })
+
+})
 
 
 

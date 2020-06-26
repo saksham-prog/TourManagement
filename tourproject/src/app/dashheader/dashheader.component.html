@@ -1,26 +1,21 @@
-
 <div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" (click)="CallcloseNav()">&times;</a>
-  <a href="#">View Package Details</a>
-  <a href="#">View Booking Details</a>
-  <a href="#">View User Details</a> 
-  <a (click)="logout()" >LogOut</a> 
+    <a href="javascript:void(0)" class="closebtn" (click)="CallcloseNav()">&times;</a>
+    <a href="#">View Package Details</a>
+    <a href="#">Your Booking Details</a>
+    <a routerlink="/form" href="#">Book NOW</a>
+    <a (click)="logout()">LogOut</a>
+
 </div>
 
 <div id="main">
-  <div class="container h-100">
-    <div class="d-flex justify-content-center h-100">
-      <div class="searchbar">
-        <input class="search_input" type="text" name="" placeholder="Search...">
-        <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
-      </div>
+    <div class="container h-100">
+        <div class="d-flex justify-content-center h-100">
+            <div class="searchbar">
+                <input class="search_input" type="text" name="" placeholder="Search...">
+                <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
+            </div>
+        </div>
     </div>
-  </div>
- 
-  <span style="font-size:30px;cursor:pointer" (click)="CallopenNav()" >&#9776; </span>
+
+    <span style="font-size:30px;cursor:pointer" (click)="CallopenNav()">&#9776; </span>
 </div>
-
-
-
-
-

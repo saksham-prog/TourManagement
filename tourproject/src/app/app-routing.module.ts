@@ -25,6 +25,7 @@ import { DallakeComponent } from './dallake/dallake.component';
 import { FlowersComponent } from './flowers/flowers.component';
 import { AndamanComponent } from './andaman/andaman.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { FormComponent } from './form/form.component';
 
 
 const routes: Routes = [
@@ -41,9 +42,8 @@ const routes: Routes = [
   ]},
 
   {path:'about', component:AboutComponent},
-  {path:'choose', component:ChooseComponent, children:[
-    {path:'webpage', component:WebpageComponent}
-  ]},
+  
+  
   
   {path:'dashboard', component:dashboardComponent, canActivate:[AuthGuard], children:[
     
@@ -61,7 +61,9 @@ const routes: Routes = [
 
   {path:'contact', component:ContactComponent},
   {path:'dashboard', component:dashboardComponent, canActivate:[AuthGuard]},
-  {path:'admin-dashboard', component:AdminDashboardComponent, canActivate:[AuthGuard]}
+  {path:'admin-dashboard', component:AdminDashboardComponent, canActivate:[AuthGuard]},
+  {path:'form', component:FormComponent},
+
 
   ];
 

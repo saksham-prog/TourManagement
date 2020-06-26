@@ -34,6 +34,10 @@ export class DataService {
   {
     return this.http.post('http://localhost:3000/submit', d);
   }
+  add(d):any
+  {
+    return this.http.post('http://localhost:3000/add', d);
+  }
 
 
 }
