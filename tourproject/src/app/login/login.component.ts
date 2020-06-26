@@ -75,7 +75,6 @@ export class LoginComponent implements OnInit {
     console.log(this.signupelement);
     console.log(this.loginelement);
     this.signupelement.nativeElement.style.display="block";
-
     this.loginelement.nativeElement.style.display="none"
       
     
