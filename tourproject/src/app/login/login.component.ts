@@ -17,13 +17,9 @@ export class LoginComponent implements OnInit {
   emailPropsu;
   passwordPropsu;
   nameProptu;
-  AdminIdProptu;
-  passwordProptu;
-  
   @ViewChild('signUPForm') signupelement;
   @ViewChild('loginForm')  loginelement;
   @ViewChild('mclose') closebtn;
-  @ViewChild('choose') chooseelement;
   constructor( private router:Router, private ds:DataService ) { }
 
   ngOnInit(): void {
@@ -48,7 +44,12 @@ export class LoginComponent implements OnInit {
         
         
         this.closebtn.nativeElement.click();
-         this.router.navigate(['/dashboard']);
+        if(response.data[0].role=="user"){
+          this.router.navigate(['/dashboard']);
+        }else{
+          this.router.navigate(['/admin-dashboard']);
+        }
+        
 
       }
       else{
@@ -58,11 +59,7 @@ export class LoginComponent implements OnInit {
 
    
   }
-  chooselogin(){
-  this.chooseelement.nativeElement.click(); 
-  this.signupelement.nativeElement.style.display="block"
-  this.loginelement.nativeElement.style.display="block"
-  }
+ 
   showLogin()
   {
     

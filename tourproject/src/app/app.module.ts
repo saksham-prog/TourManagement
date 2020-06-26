@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { WebpageComponent } from './webpage/webpage.component';
@@ -16,8 +15,21 @@ import { BodyComponent } from './body/body.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ContactComponent } from './contact/contact.component';
+import { DashbodyComponent } from './dashbody/dashbody.component';
 import { ChooseComponent } from './choose/choose.component';
 import { AdminComponent } from './admin/admin.component';
+import { GoaaComponent } from './goaa/goaa.component';
+import { OotyComponent } from './ooty/ooty.component';
+import { LehComponent } from './leh/leh.component';
+import { DallakeComponent } from './dallake/dallake.component';
+import { AndamanComponent } from './andaman/andaman.component';
+import { UdaipurComponent } from './udaipur/udaipur.component';
+import { FlowersComponent } from './flowers/flowers.component';
+import { KasolComponent } from './kasol/kasol.component';
+import { HimalayaComponent } from './himalaya/himalaya.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { FormComponent } from './form/form.component';
+
 
 @NgModule({
   declarations: [
@@ -33,8 +45,21 @@ import { AdminComponent } from './admin/admin.component';
     LoginComponent,
     BodyComponent,
     ContactComponent,
+    DashbodyComponent,
+    GoaaComponent,
+    OotyComponent,
+    LehComponent,
+    DallakeComponent,
+    AndamanComponent,
+    UdaipurComponent,
+    FlowersComponent,
+    KasolComponent,
+    HimalayaComponent,
     ChooseComponent,
-    AdminComponent
+    AdminComponent,
+    AdminDashboardComponent,
+    FormComponent
+
   ],
   imports: [
     BrowserModule,

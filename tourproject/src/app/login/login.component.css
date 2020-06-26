@@ -24,10 +24,10 @@ img {
     left: calc(50% - 50px);
 }
 
-.signupForm{
+.signupForm {
     display: none;
 }
 
-.loginForm{
+.loginForm {
     display: block;
 }
