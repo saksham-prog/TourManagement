@@ -45,25 +45,22 @@ const routes: Routes = [
     {path:'webpage', component:WebpageComponent}
   ]},
   
-  {path:'dashboard', component:dashboardComponent, canActivate:[AuthGuard], children:[
-    
-    {path:'goaa', component:GoaaComponent},
-    {path:'ooty', component:OotyComponent},
-    {path:'udaipur', component:UdaipurComponent},
-    {path:'kasol', component:KasolComponent},
-    {path:'leh', component:LehComponent},
-    {path:'himalaya', component:HimalayaComponent},
-    {path:'dallake', component:DallakeComponent},
-    {path:'flowers', component:FlowersComponent},
-    {path:'andaman', component:AndamanComponent}
-  ]},
-
-
+  {path:'dashboard', component:dashboardComponent, canActivate:[AuthGuard]},
+  {path:'goaa', component:GoaaComponent},
+  {path:'ooty', component:OotyComponent},
+  {path:'udaipur', component:UdaipurComponent},
+  {path:'kasol', component:KasolComponent},
+  {path:'leh', component:LehComponent},
+  {path:'himalaya', component:HimalayaComponent},
+  {path:'dallake', component:DallakeComponent},
+  {path:'flowers', component:FlowersComponent},
+  {path:'andaman', component:AndamanComponent},
   {path:'contact', component:ContactComponent},
   {path:'dashboard', component:dashboardComponent, canActivate:[AuthGuard]},
   {path:'admin-dashboard', component:AdminDashboardComponent, canActivate:[AuthGuard]}
 
-  ];
+  
+];
 
 
 @NgModule({
