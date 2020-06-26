@@ -22,10 +22,10 @@ export class AdminDashboardComponent implements OnInit {
     // // })
     // this.name=localStorage.getItem('name');
   }
-  logout()
-  {
-    localStorage.removeItem("email");
-    localStorage.removeItem('name')
-    this.router.navigate(['/']);
-  }
+  // logout()
+  // {
+  //   localStorage.removeItem("email");
+  //   localStorage.removeItem('name')
+  //   this.router.navigate(['/']);
+  // }
 }

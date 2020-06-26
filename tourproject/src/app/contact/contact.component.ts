@@ -25,7 +25,7 @@ submit()
    
 
       alert('Your enquiries are submitted');
-      alert('we will contact you in 24 hours');
+      alert('We will contact you in 24 hours');
       this.router.navigate(['/']);
 
 

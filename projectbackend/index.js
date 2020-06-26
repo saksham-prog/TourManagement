@@ -118,26 +118,4 @@ app.post('/submit', bodyParser.json(), (req, res) => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 app.listen(3000, () => { console.log("server is listining on port 3000") });
