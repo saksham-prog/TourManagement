@@ -60,6 +60,26 @@ app.post('/sign-in', bodyParser.json(), (req, res) => {
 
 })
 
+app.get('/getAllplaces', (req,res)=>{
+
+    console.log(req.body)
+    var collection = connection.db(dbName).collection('places');
+
+
+    collection.find().toArray((err, docs) => {
+        console.log("docs found");
+        console.log(docs);
+        if (!err && docs.length > 0) {
+            res.send({ status: "ok", data: docs });
+        } else {
+            res.send({ status: "failed", data: err });
+        }
+    })
+
+
+
+})
+
 
 
 app.post('/sign-up', bodyParser.json(), (req, res) => {

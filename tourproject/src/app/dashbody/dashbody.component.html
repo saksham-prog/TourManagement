@@ -29,7 +29,7 @@
 
     <div class="description-container">
 
-     <div><li routerLink="/goaa" type="button" data-toggle="modal" data-target="#exampleModalLong">
+     <div><li routerLink="goaa" type="button" data-toggle="modal" data-target="#exampleModalLong">
       <img src="../../assets/images/ngoa.jpg" alt="" class="img-responsive floating-image right"></li></div>
       
 
@@ -39,7 +39,7 @@
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo minima, nobis accusamus ea illum asperiores laborum quam repudiandae! Similique ipsum atque accusamus quaerat earum velit at hic iste inventore dolores.</p>
         <p></p>   
 
-        <div><li routerLink="/ooty" type="button" data-toggle="modal" data-target="#exampleModalLong">
+        <div><li routerLink="ooty" type="button" data-toggle="modal" data-target="#exampleModalLong">
         <img src="../../assets/images/ooty.jpg" alt="" class="img-responsive floating-image left">
       </li></div>
 
@@ -115,6 +115,16 @@
 
     </div>
     
+</div>
+
+
+
+<input type="text" [(ngModel)]="ct" name="ct">
+<button (click)="fetchPlaces()"> click</button>
+
+
+<div *ngFor="let p of filteredPlaces" style="width: 300px; height:300px; background-color: red;">
+  {{p|json}}
 </div>
 
   

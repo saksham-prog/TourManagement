@@ -18,6 +18,12 @@ export class DataService {
      
   }
 
+  fetchPlaces():any
+  {
+    return this.http.get('http://localhost:3000/getAllplaces')
+  }
+
+
 
   signUp(d):any
   {
