@@ -2,7 +2,7 @@
     <a href="javascript:void(0)" class="closebtn" (click)="CallcloseNav()">&times;</a>
     <a href="#">View Package Details</a>
     <a href="#">Your Booking Details</a>
-    <!-- <a routerlink="form" href="#">Book NOW</a> -->
+
 
     <a routerLink="/form">Book NOW</a>
 
@@ -15,7 +15,7 @@
         <div class="d-flex justify-content-center h-100">
             <div class="searchbar">
                 <input type="text" class="search_input" [(ngModel)]="ct" name="ct" placeholder="Search...">
-                <button class="search_icon"><i class="fas fa-search" click="fetchPlaces()"></i></button>
+                <button class="search_icon" (click)="fetchPlaces()"><i class="fas fa-search" ></i></button>
                 <div *ngFor="let p of filteredPlaces">
                     {{p|json}}
                 </div>
