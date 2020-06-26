@@ -29,6 +29,7 @@ import { KasolComponent } from './kasol/kasol.component';
 import { HimalayaComponent } from './himalaya/himalaya.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { FormComponent } from './form/form.component';
+import { SearchComponent } from './search/search.component';
 
 
 @NgModule({
@@ -58,7 +59,8 @@ import { FormComponent } from './form/form.component';
     ChooseComponent,
     AdminComponent,
     AdminDashboardComponent,
-    FormComponent
+    FormComponent,
+    SearchComponent
 
   ],
   imports: [
