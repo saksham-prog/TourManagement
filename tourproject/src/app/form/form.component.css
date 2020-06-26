@@ -1,0 +1,51 @@
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: red;
+    font-size: 100px;
+    font-weight: bold;
+    text-align: center;
+    margin-right: 10px;
+    margin-bottom: 0%;
+}
+
+label {
+    color: white;
+    font-size: small;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+button {
+    align-items: center;
+    margin-right: auto;
+}
+
+section {
+    padding: 0 100px;
+    background: url(../../assets/images/form.jpg);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+    padding: 50px;
+    background: transparent;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+    border: 10%;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    border: 2px solid rgb(34, 44, 51);
+    transition: 0.25s
+}
+
+
+/* p {
+    color: black;
+    font-size: 17px;
+} */

@@ -28,6 +28,8 @@ import { FlowersComponent } from './flowers/flowers.component';
 import { KasolComponent } from './kasol/kasol.component';
 import { HimalayaComponent } from './himalaya/himalaya.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { FormComponent } from './form/form.component';
+import { SearchComponent } from './search/search.component';
 
 
 @NgModule({
@@ -56,7 +58,9 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
     HimalayaComponent,
     ChooseComponent,
     AdminComponent,
-    AdminDashboardComponent
+    AdminDashboardComponent,
+    FormComponent,
+    SearchComponent
 
   ],
   imports: [

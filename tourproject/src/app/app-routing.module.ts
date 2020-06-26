@@ -25,6 +25,8 @@ import { DallakeComponent } from './dallake/dallake.component';
 import { FlowersComponent } from './flowers/flowers.component';
 import { AndamanComponent } from './andaman/andaman.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { FormComponent } from './form/form.component';
+import { SearchComponent } from './search/search.component';
 
 
 const routes: Routes = [
@@ -41,10 +43,10 @@ const routes: Routes = [
   ]},
 
   {path:'about', component:AboutComponent},
-  {path:'choose', component:ChooseComponent, children:[
-    {path:'webpage', component:WebpageComponent}
-  ]},
   
+  
+  
+<<<<<<< HEAD
   {path:'dashboard', component:dashboardComponent, canActivate:[AuthGuard]},
   {path:'goaa', component:GoaaComponent},
   {path:'ooty', component:OotyComponent},
@@ -55,9 +57,28 @@ const routes: Routes = [
   {path:'dallake', component:DallakeComponent},
   {path:'flowers', component:FlowersComponent},
   {path:'andaman', component:AndamanComponent},
+=======
+  {path:'dashboard', component:dashboardComponent, canActivate:[AuthGuard], children:[
+    
+    {path:'goaa', component:GoaaComponent},
+    {path:'ooty', component:OotyComponent},
+    {path:'udaipur', component:UdaipurComponent},
+    {path:'kasol', component:KasolComponent},
+    {path:'leh', component:LehComponent},
+    {path:'himalaya', component:HimalayaComponent},
+    {path:'dallake', component:DallakeComponent},
+    {path:'flowers', component:FlowersComponent},
+    {path:'andaman', component:AndamanComponent},
+ 
+  ]},
+
+
+>>>>>>> fcecfce5f6ddfc234dae23734c9b5baa37e14d74
   {path:'contact', component:ContactComponent},
-  {path:'dashboard', component:dashboardComponent, canActivate:[AuthGuard]},
-  {path:'admin-dashboard', component:AdminDashboardComponent, canActivate:[AuthGuard]}
+  {path:'search', component:SearchComponent},
+  {path:'admin-dashboard', component:AdminDashboardComponent, canActivate:[AuthGuard]},
+  {path:'form', component:FormComponent},
+
 
   
 ];

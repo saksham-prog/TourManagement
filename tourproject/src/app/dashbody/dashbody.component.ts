@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-dashbody',
   templateUrl: './dashbody.component.html',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashbodyComponent implements OnInit {
 
+  
   constructor() { }
 
   ngOnInit(): void {
   }
+
 
 }

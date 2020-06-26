@@ -18,6 +18,12 @@ export class DataService {
      
   }
 
+  fetchPlaces():any
+  {
+    return this.http.get('http://localhost:3000/getAllplaces')
+  }
+
+
 
   signUp(d):any
   {
@@ -33,6 +39,10 @@ export class DataService {
   submit(d):any
   {
     return this.http.post('http://localhost:3000/submit', d);
+  }
+  add(d):any
+  {
+    return this.http.post('http://localhost:3000/add', d);
   }
 
 
