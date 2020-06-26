@@ -26,6 +26,7 @@ import { FlowersComponent } from './flowers/flowers.component';
 import { AndamanComponent } from './andaman/andaman.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { FormComponent } from './form/form.component';
+import { SearchComponent } from './search/search.component';
 
 
 const routes: Routes = [
@@ -55,12 +56,13 @@ const routes: Routes = [
     {path:'himalaya', component:HimalayaComponent},
     {path:'dallake', component:DallakeComponent},
     {path:'flowers', component:FlowersComponent},
-    {path:'andaman', component:AndamanComponent}
+    {path:'andaman', component:AndamanComponent},
+    {path:'search', component:SearchComponent}
   ]},
 
 
   {path:'contact', component:ContactComponent},
-  {path:'dashboard', component:dashboardComponent, canActivate:[AuthGuard]},
+
   {path:'admin-dashboard', component:AdminDashboardComponent, canActivate:[AuthGuard]},
   {path:'form', component:FormComponent},
 

@@ -41,23 +41,8 @@ export class dashheaderComponent implements OnInit {
   fetchPlaces()
   {
     alert("input value"+this.ct);
-      this.ds.fetchPlaces().subscribe((d)=>{
-
-        alert("returned data"+JSON.stringify(d))
-        
-
-      var allplaces = d.data;
-      console.log(allplaces);
-      this.filteredPlaces=   allplaces.filter((p)=>{
-        alert("--"+p.city+"-"+this.ct+"--")  
-        return p.city == this.ct;
-
-        })
-
-        alert("this is filtered"+JSON.stringify(this.filteredPlaces))
-
-      })
-
+    localStorage.setItem('searchCity', this.ct);
+     this.router.navigate(['/dashboard/search']) ;
      
       
 
