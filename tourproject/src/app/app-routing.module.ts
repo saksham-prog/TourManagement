@@ -46,7 +46,7 @@ const routes: Routes = [
   
   
   
-<<<<<<< HEAD
+
   {path:'dashboard', component:dashboardComponent, canActivate:[AuthGuard]},
   {path:'goaa', component:GoaaComponent},
   {path:'ooty', component:OotyComponent},
@@ -57,7 +57,6 @@ const routes: Routes = [
   {path:'dallake', component:DallakeComponent},
   {path:'flowers', component:FlowersComponent},
   {path:'andaman', component:AndamanComponent},
-=======
   {path:'dashboard', component:dashboardComponent, canActivate:[AuthGuard], children:[
     
     {path:'goaa', component:GoaaComponent},
@@ -73,7 +72,6 @@ const routes: Routes = [
   ]},
 
 
->>>>>>> fcecfce5f6ddfc234dae23734c9b5baa37e14d74
   {path:'contact', component:ContactComponent},
   {path:'search', component:SearchComponent},
   {path:'admin-dashboard', component:AdminDashboardComponent, canActivate:[AuthGuard]},
