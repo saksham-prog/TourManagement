@@ -46,17 +46,6 @@ const routes: Routes = [
   
   
   
-
-  {path:'dashboard', component:dashboardComponent, canActivate:[AuthGuard]},
-  {path:'goaa', component:GoaaComponent},
-  {path:'ooty', component:OotyComponent},
-  {path:'udaipur', component:UdaipurComponent},
-  {path:'kasol', component:KasolComponent},
-  {path:'leh', component:LehComponent},
-  {path:'himalaya', component:HimalayaComponent},
-  {path:'dallake', component:DallakeComponent},
-  {path:'flowers', component:FlowersComponent},
-  {path:'andaman', component:AndamanComponent},
   {path:'dashboard', component:dashboardComponent, canActivate:[AuthGuard], children:[
     
     {path:'goaa', component:GoaaComponent},
@@ -78,8 +67,7 @@ const routes: Routes = [
   {path:'form', component:FormComponent},
 
 
-  
-];
+  ];
 
 
 @NgModule({

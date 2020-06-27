@@ -3,18 +3,6 @@
     margin-left: 200px;
     
 }
-.inside{
-  border: 1px solid;
-  padding: 10px;
-  margin-top: 15px;
-  box-shadow: 5px 10px 8px #888888;
-}
-
-.caption{
-  font-size: 25px;
-  color: #fff;
-}
-
 
 div.polaroid {
     width: 310px;
@@ -41,7 +29,7 @@ div.polaroid {
   
 img{
     padding: 10px;
-    margin: 10px;
+    margin: 20px;
 }
 
   .description-container {

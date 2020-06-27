@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
       
     this.ds.signIn({ email:this.emailProp, password:this.passwordProp})
     .subscribe((response)=>{
-      alert("hello");
+      
       alert(JSON.stringify(response));
       if(response.status=="ok")
       {
