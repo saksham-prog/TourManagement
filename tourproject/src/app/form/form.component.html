@@ -10,11 +10,11 @@
                     <input #placeref="ngModel" [(ngModel)]="placeProp" name="place" type="text" class="form-control" placeholder="Enter place" id="place">
                 </div>
                 <div class="form-group">
-                    <label for="email">Add State:</label>
+                    <label for="state">Add State:</label>
                     <input #stateref="ngModel" [(ngModel)]="stateProp" name="state" type="text" class="form-control" placeholder="Enter state" id="state">
                 </div>
                 <div class="form-group">
-                    <label for="email">Booking Member Name:</label>
+                    <label for="name">Booking Member Name:</label>
                     <input #nameref="ngModel" [(ngModel)]="nameProp" name="name" type="text" class="form-control" placeholder="Enter name" id="name">
                 </div>
                 <div class="form-group">
@@ -35,7 +35,7 @@
                     <input #childref="ngModel" [(ngModel)]="childProp" name="child" type="number" class="form-control" placeholder="no. of children" id="child">
                 </div>
                 <div class="form-group">
-                    <label for="email">From Date:</label>
+                    <label for="date">From Date:</label>
                     <input #dateref="ngModel" [(ngModel)]="dateProp" name="date" type="date" class="form-control" placeholder="date" id="date">
                 </div>
                 <div class="form-group">
@@ -48,14 +48,14 @@
                 </div>
                 <div class="form-group">
                     <label for="pwd">Description:</label>
-                    <textarea #messageref="ngModel" [(ngModel)]="messageProp" name="message" type="message" class="form-control" placeholder="Requirements..." id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <textarea #messageref="ngModel" [(ngModel)]="messageProp" name="message" type="message" class="form-control" placeholder="Description.." id="exampleFormControlTextarea1" rows="3"></textarea>
                 </div>
+                <p></p>
                 <button type="submit" class="btn btn-outline-warning" (click)="add()">Submit</button>
 
             </form>
         </div>
-        <p>Terms and Condition Apply</p>
 
-
+        <p>Terms And Condition Apply:-</p>
     </div>
 </section>
