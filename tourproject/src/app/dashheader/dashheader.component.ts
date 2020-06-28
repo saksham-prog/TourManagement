@@ -14,6 +14,7 @@ declare var closeNav;
 export class dashheaderComponent implements OnInit {
   ct;
   filteredPlaces;
+  
   CallopenNav()
   {
     openNav();
@@ -40,7 +41,7 @@ export class dashheaderComponent implements OnInit {
 
   fetchPlaces()
   {
-    alert("input value"+this.ct);
+    alert("input value"+ this.ct);
     localStorage.setItem('searchCity', this.ct);
      this.router.navigate(['/search']) ;
      
