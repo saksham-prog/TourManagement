@@ -1,4 +1,4 @@
-.item {
+/* .item {
     width: 100%;
     height: 300%;
     box-shadow: 3px 4px 4px gray;
@@ -15,4 +15,13 @@
     flex-wrap: wrap;
     padding: 50px;
     box-sizing: border-box;
+} */
+
+section {
+    padding: 0 100px;
+    background: url(../../assets/images/form.jpg);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
