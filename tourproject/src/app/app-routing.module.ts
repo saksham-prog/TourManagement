@@ -27,6 +27,7 @@ import { AndamanComponent } from './andaman/andaman.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { FormComponent } from './form/form.component';
 import { SearchComponent } from './search/search.component';
+import { PackageComponent } from './package/package.component';
 
 
 const routes: Routes = [
@@ -69,7 +70,8 @@ const routes: Routes = [
   {path:'contact', component:ContactComponent},
   {path:'search', component:SearchComponent},
   {path:'admin-dashboard', component:AdminDashboardComponent, canActivate:[AuthGuard]},
-  {path:'form', component:FormComponent}
+  {path:'form', component:FormComponent},
+  {path:'package', component:PackageComponent}
 
 
   
