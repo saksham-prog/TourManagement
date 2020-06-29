@@ -30,6 +30,7 @@ import { HimalayaComponent } from './himalaya/himalaya.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { FormComponent } from './form/form.component';
 import { SearchComponent } from './search/search.component';
+import { PackageComponent } from './package/package.component';
 
 
 @NgModule({
@@ -60,7 +61,8 @@ import { SearchComponent } from './search/search.component';
     AdminComponent,
     AdminDashboardComponent,
     FormComponent,
-    SearchComponent
+    SearchComponent,
+    PackageComponent
 
   ],
   imports: [
