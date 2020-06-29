@@ -64,7 +64,7 @@ const routes: Routes = [
     {path:'dallake', component:DallakeComponent},
     {path:'flowers', component:FlowersComponent},
     {path:'andaman', component:AndamanComponent},
- 
+    
   ]},
 
   {path:'contact', component:ContactComponent},

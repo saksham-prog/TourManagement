@@ -17,13 +17,15 @@ export class FormComponent implements OnInit {
   nameProp;
   mobileProp;
   amountProp;
+  dateProp;
+  datePropsu;
   constructor( private router:Router, private ds:DataService) { }
 
   ngOnInit(): void {
   }
 
 add()
-  {this.ds.add({name:this.nameProp,mobile:this.mobileProp, email:this.emailProp, message:this.messageProp, place:this.placeProp, state:this.stateProp, adult:this.adultProp, child:this.childProp, amount:this.amountProp})
+  {this.ds.add({name:this.nameProp,mobile:this.mobileProp, email:this.emailProp, message:this.messageProp, place:this.placeProp, state:this.stateProp, adult:this.adultProp, child:this.childProp, amount:this.amountProp, date:this.dateProp, datesu:this.datePropsu})
   .subscribe((response)=>{
     if(response.status=="ok")
     {

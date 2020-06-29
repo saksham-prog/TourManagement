@@ -1,1 +1,13 @@
-<p>search works!</p>
+<div class="products">
+    <div class="item" *ngFor="let p of filteredPlaces">
+        <!-- {{p|json}} -->
+
+        <p>PLACES: <br>{{p.places}} </p>
+        <p>CITY: {{p.city}}</p>
+        <p>HOTELS: {{p.hotels}}</p>
+        <p>TOTAL TOUR PACKAGE AMOUNT: {{p.totalpackage}}</p>
+        <button routerLink="/dashboard">ok</button>
+    </div>
+    <!-- <app-search class="item" *ngFor="let p of filteredPlaces"></app-search> -->
+
+</div>
