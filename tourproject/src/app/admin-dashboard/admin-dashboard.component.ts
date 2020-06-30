@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
+import { DataService } from '../data.service';
 
 
 @Component({
@@ -10,17 +11,13 @@ import { Router } from '@angular/router';
 })
 export class AdminDashboardComponent implements OnInit {
 
-  // name;
-  // email;
-  constructor( private router: Router ) { }
+
+  constructor( private router: Router,private ds:DataService ) { }
 
   ngOnInit(): void {
 
-    // this.email=localStorage.getItem('email')
-    // // this.route.queryParamMap.subscribe((d)=>{
-    // //     this.name = d.get('name');
-    // // })
-    // this.name=localStorage.getItem('name');
+    
+    
   }
   logout()
   {
@@ -28,4 +25,5 @@ export class AdminDashboardComponent implements OnInit {
     localStorage.removeItem('name')
     this.router.navigate(['/']);
   }
+  
 }

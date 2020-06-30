@@ -1,0 +1,13 @@
+<form action="">
+    <input type="text" #placeNameref="ngModel" name= "placeName" [(ngModel)]="placeName"  >
+    <input type="text"  #cityNameref="ngModel" name= "cityName" [(ngModel)]="cityName">
+    <input type="text"  #stateNameref="ngModel" name= "stateName" [(ngModel)]="stateName">
+    <input type="text" #descref="ngModel" name= "desc" [(ngModel)]="desc">
+    <input type="file" name="banner " (change)="getFile($event)" >
+
+    <input type="file" name="sliderimages" multiple  (change)="getSlider($event)" >
+
+
+    sliderimages
+    <button (click)="addPlace()" >submit</button>
+</form>

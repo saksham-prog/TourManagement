@@ -31,6 +31,13 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 import { FormComponent } from './form/form.component';
 import { SearchComponent } from './search/search.component';
 import { PackageComponent } from './package/package.component';
+import { BookingComponent } from './booking/booking.component';
+import { Search2Component } from './search2/search2.component';
+import { FileUploadComponent } from './file-upload/file-upload.component';
+import { AddplaceComponent } from './addplace/addplace.component';
+import { AddpackageComponent } from './addpackage/addpackage.component';
+import { ListplacesComponent } from './listplaces/listplaces.component';
+import { ListpackagesComponent } from './listpackages/listpackages.component';
 
 
 @NgModule({
@@ -62,7 +69,14 @@ import { PackageComponent } from './package/package.component';
     AdminDashboardComponent,
     FormComponent,
     SearchComponent,
-    PackageComponent
+    PackageComponent,
+    BookingComponent,
+    Search2Component,
+    FileUploadComponent,
+    AddplaceComponent,
+    AddpackageComponent,
+    ListplacesComponent,
+    ListpackagesComponent
 
   ],
   imports: [

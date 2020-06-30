@@ -25,18 +25,19 @@ export class FormComponent implements OnInit {
   }
 
 add()
-  {this.ds.add({name:this.nameProp,mobile:this.mobileProp, email:this.emailProp, message:this.messageProp, place:this.placeProp, state:this.stateProp, adult:this.adultProp, child:this.childProp, amount:this.amountProp, date:this.dateProp, datesu:this.datePropsu})
+  {this.ds.add({name:this.nameProp,mobile:this.mobileProp, loginEmail:localStorage.getItem('email'), email:this.emailProp, message:this.messageProp, place:this.placeProp, state:this.stateProp, adult:this.adultProp, child:this.childProp, amount:this.amountProp, date:this.dateProp, datesu:this.datePropsu})
   .subscribe((response)=>{
     if(response.status=="ok")
     {
-      
-   
-
       alert('Your details are submitted');
       alert('We will contact you in 24 hours');
+<<<<<<< HEAD
       this.router.navigate(['/dashboard']);
 
 
+=======
+      this.router.navigate(['/']);
+>>>>>>> fb72418eedde5e81d6cfb41dc91c45a2b65d2571
     }
     
   })
