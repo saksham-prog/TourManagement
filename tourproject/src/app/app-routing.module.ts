@@ -30,6 +30,8 @@ import { SearchComponent } from './search/search.component';
 import { PackageComponent } from './package/package.component';
 import { BookingComponent } from './booking/booking.component';
 import { Search2Component } from './search2/search2.component'
+import { AddplaceComponent } from './addplace/addplace.component';
+import { AddpackageComponent } from './addpackage/addpackage.component';
 
 
 const routes: Routes = [
@@ -71,7 +73,14 @@ const routes: Routes = [
 
   {path:'contact', component:ContactComponent},
   {path:'search', component:SearchComponent},
-  {path:'admin-dashboard', component:AdminDashboardComponent, canActivate:[AuthGuard]},
+  {path:'admin-dashboard', component:AdminDashboardComponent, canActivate:[AuthGuard], 
+
+  children:[
+    {path:"addplace", component:AddplaceComponent },
+    {path:"addpackage", component: AddpackageComponent },
+    
+  ]
+},
   {path:'form', component:FormComponent},
   {path:'package', component:PackageComponent},
   {path:'booking', component:BookingComponent},

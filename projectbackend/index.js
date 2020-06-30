@@ -3,14 +3,95 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const MongoClient = require('mongodb').MongoClient;
 const ObjectId = require('mongodb').ObjectId;
+const multer = require('multer');
 const fs = require('fs');
 const mongodb = require('mongodb');
-const fileUpload = require('express-fileupload');
-const router = express.Router()
-const binary = mongodb.Binary;
+
+
+var storage = multer.diskStorage({
+    destination: function(req,file,cb){
+        console.log("in destination");
+        cb(null,'uploads')
+    },
+    filename:function(req,file,cb){
+       
+       
+       
+        console.log(file);
+        var ext = file.originalname.split('.').pop();
+        console.log(ext);
+
+
+        if(!req.hasTextDataProcessed)
+        {
+
+
+
+            var collection=connection.db('tourdb').collection('places');
+            collection.insert(req.body,(err,r)=>{
+                if(!err)
+                {
+                    console.log(r);
+              var insertedId=  r.insertedIds['0'];
+                    
+                      console.log("inserted id is returned as->"+insertedId)
+                      req.hasTextDataProcessed = true;
+                     req.insertedId=insertedId;
+                     req.sliderImagesCtr = 1;
+                     cb(null,req.insertedId+"_"+file.fieldname+"_"+req[file.fieldname+'Ctr']++ +"."+ext);
+       
+                  
+                }
+                else
+                {
+                    return null;
+                }
+            })
+
+
+
+
+
+
+
+
+
+
+
+
+
+              
+
+        }
+        else{
+
+            cb(null,req.insertedId+"_"+file.fieldname+"_"+req[file.fieldname+'Ctr']++ +"."+ext);
+       
+        
+        }
+
+
+    }
+})
+
+var upload=multer({storage:storage})
+
+
+
 
 var dbName = "tourdb"
-var client = new MongoClient('mongodb+srv://admin:admin@cluster0-h4v6l.mongodb.net/dbname?retryWrites=true&w=majority', { useNewUrlParser: true });
+var client = new MongoClient('mongodb+srv://admin:admin@cluster0-h4v6l.mongodb.net/tourdb?retryWrites=true&w=majority', { useNewUrlParser: true });
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -70,7 +151,6 @@ app.get('/getAllplaces', (req, res) => {
     console.log(req.body)
     var collection = connection.db(dbName).collection('places');
 
-
     collection.find().toArray((err, docs) => {
         console.log("docs found");
         console.log(docs);
@@ -90,7 +170,7 @@ app.get('/getAlldata', (req, res) => {
     var collection = connection.db(dbName).collection('form');
 
 
-    collection.find().toArray((err, docs) => {
+    collection.find({email:req.body.email}).toArray((err, docs) => {
         console.log("docs found");
         console.log(docs);
         if (!err && docs.length > 0) {
@@ -104,6 +184,12 @@ app.get('/getAlldata', (req, res) => {
 
 })
 
+
+app.post('/addPlace',
+
+                            upload.fields([{name:'banner',maxcount:1},{name:'sliderImages',maxcount:8}]),
+                            (req,res)=>{console.log("in last"); res.send({status:"ok"})   
+                        });
 
 
 app.post('/sign-up', bodyParser.json(), (req, res) => {
@@ -190,59 +276,59 @@ app.post('/add', bodyParser.json(), (req, res) => {
 
 
 
-router.get("/", (req, res) => {
-    res.sendfile('./file-upload.html', { root: __dirname })
-})
+// router.get("/", (req, res) => {
+//     res.sendfile('./file-upload.html', { root: __dirname })
+// })
 
-router.get("/", (req, res) => {
-    getFiles(res)
-})
+// router.get("/", (req, res) => {
+//     getFiles(res)
+// })
 
-app.use(fileUpload())
-router.post("/upload", (req, res) => {
-    let file = { name: req.body.name, file: binary(req.file.uploadfile.data) }
-    insertFile(file, res)
-})
+// app.use(fileUpload())
+// router.post("/upload", (req, res) => {
+//     let file = { name: req.body.name, file: binary(req.file.uploadfile.data) }
+//     insertFile(file, res)
+// })
 
-function insertFile(file, res) {
-    MongoClient.client, ((err, client) => {
-        if (err) {
-            return err
-        } else {
-            let db = sakshamdb.db('uploadDB')
-            let collection = db.collection('files')
-            try {
-                collection.insertOne(file)
-                console.log('file inserted')
-            } catch {}
-            client.close()
-            res.redirect('/')
-        }
-    });
-}
+// function insertFile(file, res) {
+//     MongoClient.client, ((err, client) => {
+//         if (err) {
+//             return err
+//         } else {
+//             let db = sakshamdb.db('uploadDB')
+//             let collection = db.collection('files')
+//             try {
+//                 collection.insertOne(file)
+//                 console.log('file inserted')
+//             } catch {}
+//             client.close()
+//             res.redirect('/')
+//         }
+//     });
+// }
 
-function getFiles(res) {
+// function getFiles(res) {
 
-    MongoClient.client('mongodb+srv://admin:admin@cluster0-h4v6l.mongodb.net/dbname?retryWrites=true&w=majority', { useNewUrlParser: true }, (err, client) => {
-        if (err) {
-            return err
-        } else {
-            let db = sakshamdb.db('uploadDB')
-            let collection = db.collection('files')
-            collection.find({}).toArray((err, docs) => {
-                if (err) {
-                    console.log('err in finding doc:', err)
-                } else {
-                    let buffer = doc[0].file.buffer
-                    fs.writeFileSync('uploadedimage.jpg'.buffer)
-                }
-            })
-            client.close()
-            res.redirect('/')
-        }
-    });
-}
-app.use("/", router)
+//     MongoClient.client('mongodb+srv://admin:admin@cluster0-h4v6l.mongodb.net/dbname?retryWrites=true&w=majority', { useNewUrlParser: true }, (err, client) => {
+//         if (err) {
+//             return err
+//         } else {
+//             let db = sakshamdb.db('uploadDB')
+//             let collection = db.collection('files')
+//             collection.find({}).toArray((err, docs) => {
+//                 if (err) {
+//                     console.log('err in finding doc:', err)
+//                 } else {
+//                     let buffer = doc[0].file.buffer
+//                     fs.writeFileSync('uploadedimage.jpg'.buffer)
+//                 }
+//             })
+//             client.close()
+//             res.redirect('/')
+//         }
+//     });
+// }
+// app.use("/", router)
 
 
 

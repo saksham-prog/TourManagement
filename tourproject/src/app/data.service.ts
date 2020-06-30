@@ -23,9 +23,9 @@ export class DataService {
     return this.http.get('http://localhost:3000/getAllplaces')
   }
 
-  fetchData():any
+  fetchData(d):any
   {
-    return this.http.get('http://localhost:3000/getAlldata')
+    return this.http.post('http://localhost:3000/getAlldata', d)
   }
 
 
@@ -47,6 +47,10 @@ export class DataService {
   add(d):any
   {
     return this.http.post('http://localhost:3000/add', d);
+  }
+  addPlace(d):any
+  {
+    return this.http.post('http://localhost:3000/addPlace', d);
   }
 
 

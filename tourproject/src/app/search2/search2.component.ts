@@ -14,24 +14,24 @@ filteredData;
   ngOnInit(): void {
     
     this.searchName=localStorage.getItem('searchName');
-    this.ds.fetchData().subscribe((d)=>{
+    // this.ds.fetchData().subscribe((d)=>{
 
-      // alert("returned data"+JSON.stringify(d))
+    //   // alert("returned data"+JSON.stringify(d))
       
 
-    var alldata = d.data;
-    console.log(alldata);
+    // var alldata = d.data;
+    // console.log(alldata);
     
-    this.filteredData=   alldata.filter((p)=>{
+    // this.filteredData=   alldata.filter((p)=>{
      
-      // alert("--"+p.city+"-"+this.ct+"--")  
-      return p.name == this.searchName;
+    //   // alert("--"+p.city+"-"+this.ct+"--")  
+    //   return p.name == this.searchName;
 
-      })
+    //   })
 
-      alert("this is filtered"+JSON.stringify(this.filteredData))
+    //   alert("this is filtered"+JSON.stringify(this.filteredData))
 
-    })
+    // })
 
   }
 

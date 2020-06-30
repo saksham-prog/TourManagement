@@ -10,20 +10,15 @@ import { DataService } from '../data.service';
 export class BookingComponent implements OnInit {
   name;
   filteredData;
+  email;
   
 
   constructor(private router: Router,private ds:DataService) { }
   ngOnInit(): void {
-    
+    this.email=  localStorage.getItem('email');
+     this.ds.fetchData({email:this.email}).subscribe((d)=>{
+       this.filteredData= d.data;
+     })
   }
 
-  fetchData()
-  {
-    alert("input value"+ this.name);
-    localStorage.setItem('searchCity', this.name);
-     this.router.navigate(['/search2']) ;
-     
-      
-
-  }
 }

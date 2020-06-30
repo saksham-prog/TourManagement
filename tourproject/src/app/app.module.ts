@@ -34,6 +34,10 @@ import { PackageComponent } from './package/package.component';
 import { BookingComponent } from './booking/booking.component';
 import { Search2Component } from './search2/search2.component';
 import { FileUploadComponent } from './file-upload/file-upload.component';
+import { AddplaceComponent } from './addplace/addplace.component';
+import { AddpackageComponent } from './addpackage/addpackage.component';
+import { ListplacesComponent } from './listplaces/listplaces.component';
+import { ListpackagesComponent } from './listpackages/listpackages.component';
 
 
 @NgModule({
@@ -68,7 +72,11 @@ import { FileUploadComponent } from './file-upload/file-upload.component';
     PackageComponent,
     BookingComponent,
     Search2Component,
-    FileUploadComponent
+    FileUploadComponent,
+    AddplaceComponent,
+    AddpackageComponent,
+    ListplacesComponent,
+    ListpackagesComponent
 
   ],
   imports: [
