@@ -23,6 +23,10 @@ export class DataService {
     return this.http.get('http://localhost:3000/getAllplaces')
   }
 
+  fetchData():any
+  {
+    return this.http.get('http://localhost:3000/getAlldata')
+  }
 
 
   signUp(d):any

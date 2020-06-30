@@ -2,10 +2,10 @@
     <a href="javascript:void(0)" class="closebtn" (click)="CallcloseNav()">&times;</a>
     <a routerLink="/package">View Package Details</a>
     <a routerLink="/form">Book Now</a>
-    <a href="#">Your Booking Details</a>
+    <a routerLink="/booking">Your Booking Details</a>
 
 
-   
+
 
     <a (click)="logout()">LogOut</a>
 
@@ -24,10 +24,9 @@
                     {{p|json}}
                 </div>
             </div>
-           
-            
-        </div>  
+
+
+        </div>
     </div>
     <span style="font-size:30px;cursor:pointer" (click)="CallopenNav()">&#9776; </span>
 </div>
-

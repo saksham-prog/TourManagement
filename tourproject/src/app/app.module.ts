@@ -31,6 +31,9 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 import { FormComponent } from './form/form.component';
 import { SearchComponent } from './search/search.component';
 import { PackageComponent } from './package/package.component';
+import { BookingComponent } from './booking/booking.component';
+import { Search2Component } from './search2/search2.component';
+import { FileUploadComponent } from './file-upload/file-upload.component';
 
 
 @NgModule({
@@ -62,7 +65,10 @@ import { PackageComponent } from './package/package.component';
     AdminDashboardComponent,
     FormComponent,
     SearchComponent,
-    PackageComponent
+    PackageComponent,
+    BookingComponent,
+    Search2Component,
+    FileUploadComponent
 
   ],
   imports: [

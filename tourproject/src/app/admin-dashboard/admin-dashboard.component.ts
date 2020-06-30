@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
+import { DataService } from '../data.service';
 
 
 @Component({
@@ -9,10 +10,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./admin-dashboard.component.css']
 })
 export class AdminDashboardComponent implements OnInit {
-
+alldata;
+filteredData;
   // name;
   // email;
-  constructor( private router: Router ) { }
+  constructor( private router: Router,private ds:DataService ) { }
 
   ngOnInit(): void {
 
@@ -21,6 +23,26 @@ export class AdminDashboardComponent implements OnInit {
     // //     this.name = d.get('name');
     // // })
     // this.name=localStorage.getItem('name');
+                                // this.ds.fetchData().subscribe((d)=>{
+
+      // alert("returned data"+JSON.stringify(d))
+      
+
+                             // var alldata = d.data;
+                             // console.log(alldata);
+    
+                              // this.filteredData=   alldata.filter((p)=>{
+     
+                                       //   // alert("--"+p.city+"-"+this.ct+"--")  
+                                         //   return p.data == this.alldata;
+
+                                          //   })
+
+                                        //   alert("this is filtered"+JSON.stringify(this.filteredData))
+
+                                          // })
+
+    
   }
   logout()
   {
@@ -28,4 +50,5 @@ export class AdminDashboardComponent implements OnInit {
     localStorage.removeItem('name')
     this.router.navigate(['/']);
   }
+  
 }
