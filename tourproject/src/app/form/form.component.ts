@@ -34,7 +34,7 @@ add()
 
       alert('Your details are submitted');
       alert('We will contact you in 24 hours');
-      this.router.navigate(['/']);
+      this.router.navigate(['/dashboard']);
 
 
     }
