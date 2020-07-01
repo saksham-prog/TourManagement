@@ -15,6 +15,7 @@ export class BookingComponent implements OnInit {
 
   constructor(private router: Router,private ds:DataService) { }
   ngOnInit(): void {
+    alert("hello")
     this.email=  localStorage.getItem('email');
      this.ds.fetchData({email:this.email}).subscribe((d)=>{
        this.filteredData= d.data;
