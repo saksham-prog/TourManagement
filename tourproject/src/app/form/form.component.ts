@@ -31,13 +31,10 @@ add()
     {
       alert('Your details are submitted');
       alert('We will contact you in 24 hours');
-<<<<<<< HEAD
+
       this.router.navigate(['/dashboard']);
 
-
-=======
       this.router.navigate(['/']);
->>>>>>> fb72418eedde5e81d6cfb41dc91c45a2b65d2571
     }
     
   })
