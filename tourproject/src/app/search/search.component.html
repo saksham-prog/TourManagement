@@ -1,7 +1,7 @@
 <!-- <div class="products"> -->
 <div class="item" *ngFor="let p of filteredformdata">
     {{p|json}}
-
+    <img src="http://localhost:3000/{{p._id}}_banner_NaN.jpg" alt="">
     <p>PLACES: <br>{{p.placeName}} </p>
     <p>CITY: {{p.cityName}}</p>
     <p>HOTELS: {{p.stateName}}</p>
