@@ -12,8 +12,8 @@ declare var closeNav;
   styleUrls: ['./dashheader.component.css']
 })
 export class dashheaderComponent implements OnInit {
-  ct;
-  filteredPlaces;
+  ctName;
+  filteredPlaceName;
   
   CallopenNav()
   {
@@ -41,8 +41,8 @@ export class dashheaderComponent implements OnInit {
 
   fetchPlaces()
   {
-    alert("input value"+ this.ct);
-    localStorage.setItem('searchCity', this.ct);
+    alert("input value"+ this.ctName);
+    localStorage.setItem('searchCity', this.ctName);
      this.router.navigate(['/search']) ;
      
       

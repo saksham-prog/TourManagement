@@ -8,7 +8,7 @@ import { DataService } from '../data.service';
   styleUrls: ['./booking.component.css']
 })
 export class BookingComponent implements OnInit {
-  name;
+  
   filteredData;
   email;
   

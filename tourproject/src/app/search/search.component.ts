@@ -8,30 +8,30 @@ import { DataService } from '../data.service';
 })
 export class SearchComponent implements OnInit {
 
-  searchCity;
-  filteredPlaces;
+  searchCityName;
+  filteredformdata;
   
   constructor(private ds:DataService) { }
 
   ngOnInit(): void {
 
-    this.searchCity=localStorage.getItem('searchCity');
+    this.searchCityName=localStorage.getItem('searchCity');
     this.ds.fetchPlaces().subscribe((d)=>{
 
-      // alert("returned data"+JSON.stringify(d))
+       alert("returned data"+JSON.stringify(d))
       
 
-    var allplaces = d.data;
-    console.log(allplaces);
+    var allplaceName = d.data;
+    console.log(allplaceName);
     
-    this.filteredPlaces=   allplaces.filter((p)=>{
+    this.filteredformdata=   allplaceName.filter((p)=>{
      
       // alert("--"+p.city+"-"+this.ct+"--")  
-      return p.city == this.searchCity;
+      return p.cityName == this.searchCityName;
 
       })
 
-      alert("this is filtered"+JSON.stringify(this.filteredPlaces))
+      alert("this is filtered"+JSON.stringify(this.filteredformdata))
 
     })
 

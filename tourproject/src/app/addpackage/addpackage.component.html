@@ -1,39 +1,35 @@
-<div class="container">
+<section>
+
+    <div class="box">
 
 
 
 
-    <h2>Add Tour Packages</h2>
-    <form action="/action_page.php">
-        <div class="form-group">
-            <label for="email">packageId:</label>
-            <input type="text" class="form-control" id="text" name="text">
-        </div>
-        <div class="form-group">
-            <label for="email">choose Place:</label>
-            <input type="text" class="form-control" id="text" name="text">
-        </div>
-        <!-- <div class="form-group">
-            <label for="email">Number of Adults:</label>
-            <input type="text" class="form-control" id="text" name="text">
-        </div> -->
-        <!-- <div class="form-group">
-            <label for="email">Number of Children:</label>
-            <input type="text" class="form-control" id="text" name="text">
-        </div> -->
-        <div class="form-group">
-            <label for="email">Description:</label>
-            <input type="text" class="form-control" id="text" name="text">
-        </div>
-        <div class="form-group">
-            <label for="email">Tour Amount:</label>
-            <input type="text" class="form-control" id="text" name="text">
-        </div>
-        <div class="form-group">
-            <label for="email">Total Amount:</label>
-            <input type="text" class="form-control" id="text" name="text">
-        </div>
 
+        <h2>Add Tour Packages</h2>
+        <form action="/action_page.php">
+            <div class="form-group">
+                <label for="place">Add City:</label>
+                <input type="text" #cityNameref="ngModel" name="cityName" [(ngModel)]="cityName" class="form-control" placeholder="Enter city" id="city">
+            </div>
+            <div class="form-group">
+                <label for="package">Package Name:</label>
+                <input type="text" #packageNameref="ngModel" name="packageName" [(ngModel)]="packageName" class="form-control" placeholder="Enter package" id="pack">
+            </div>
+            <div class="form-group">
+                <label for="nights">Add No. of Nights</label>
+                <input type="number" #nightsref="ngModel" name="nights" [(ngModel)]="nights" class="form-control" placeholder="Enter no. of nights" id="nights">
+            </div>
+            <div class="form-group">
+                <label for="hotels">Hotels Name</label>
+                <input type="text" #hotelsrefu="ngModel" name="hotelsu" [(ngModel)]="hotelsu" class="form-control" placeholder="Enter hotel1 name" id="hotels">
+                <input type="text" #hotelsref="ngModel" name="hotels" [(ngModel)]="hotels" class="form-control" placeholder="Enter hotel2 name" id="hotels">
+            </div>
+            <div class="form-group">
+                <label for="email">Total Amount:</label>
+                <input type="number" #priceref="ngModel" name="price" [(ngModel)]="price" class="form-control" placeholder="package price" id="price">
+            </div>
+            <!-- 
         <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Number of Days</label>
         <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
 <option selected>Choose...</option>
@@ -61,13 +57,14 @@
 <option value="2">8</option>
 <option value="3">9</option>
 
-</select>
+</select> -->
 
-        <!-- <div class="form-group">
+            <!-- <div class="form-group">
             <label for="exampleFormControlFile1">Example file input</label>
             <input type="file" class="form-control-file" id="exampleFormControlFile1">
         </div> -->
 
-        <button type="submit" class="btn btn-success">Submit</button>
-    </form>
-</div>
+            <button type="submit" class="btn btn-success" (click)="package()">Submit</button>
+        </form>
+    </div>
+</section>
