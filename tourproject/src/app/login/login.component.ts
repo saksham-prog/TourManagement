@@ -33,8 +33,8 @@ export class LoginComponent implements OnInit {
       
     this.ds.signIn({ email:this.emailProp, password:this.passwordProp})
     .subscribe((response)=>{
-      alert("hello");
-      alert(JSON.stringify(response));
+      // alert("Hello");
+      // alert(JSON.stringify(response));
       if(response.status=="ok")
       {
          
@@ -53,7 +53,7 @@ export class LoginComponent implements OnInit {
 
       }
       else{
-        alert("undefined arguments");
+        alert("Undefined arguments");
       }
     })
 

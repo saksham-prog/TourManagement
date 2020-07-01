@@ -31,3 +31,6 @@ img {
 .loginForm {
     display: block;
 }
+label{
+    margin-left: 30px;
+}
