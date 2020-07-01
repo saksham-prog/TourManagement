@@ -7,6 +7,7 @@ const multer = require('multer');
 const fs = require('fs');
 const mongodb = require('mongodb');
 const binary = require('binary');
+const path = require('path');
 
 
 var storage = multer.diskStorage({
@@ -108,6 +109,7 @@ client.connect((err, con) => {
 const app = express();
 
 app.use(cors());
+app.use(express.static(path.join(__dirname,'uploads')));
 
 
 app.get('/', (req, res) => {
@@ -146,8 +148,7 @@ app.get('/getAllplaces', (req, res) => {
 
         console.log(req.body)
         var collection = connection.db(dbName).collection('places');
-        var collection = connection.db(dbName).collection('packages');
-        collection.find().toArray((err, docs) => {
+         collection.find().toArray((err, docs) => {
             console.log("docs found");
             console.log(docs);
             if (!err && docs.length > 0) {
