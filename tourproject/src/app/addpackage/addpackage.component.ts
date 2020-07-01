@@ -19,13 +19,17 @@ constructor( private router:Router, private ds:DataService) { }
   }
 
   package()
-  {this.ds.package({cityName:this.cityName,packageName:this.packageName, search:localStorage.getItem('cityName'), nights:this.nights, hotelsu:this.hotelsu, hotels:this.hotels, price:this.price})
+  {this.ds.package({cityName:this.cityName, packageName:this.packageName, nights:this.nights, hotelsu:this.hotelsu, hotels:this.hotels, price:this.price})
   .subscribe((response)=>{
-    if(response.status=="ok")
+    alert('ok');
+    if(response == "ok")
     {
       alert('Your details are submitted');
-    
+      
+
       this.router.navigate(['/admin-dashboard']);
+    }else{
+      alert('wrong')
     }
     
   })

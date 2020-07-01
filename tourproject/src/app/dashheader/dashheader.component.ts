@@ -48,5 +48,14 @@ export class dashheaderComponent implements OnInit {
       
 
   }
+  // fetchPackages()
+  // {
+  //   alert("input value"+ this.ctName);
+  //   localStorage.setItem('searchCity', this.ctName);
+  //    this.router.navigate(['/search']) ;
+     
+      
+
+  // }
 
 }

@@ -109,7 +109,7 @@ client.connect((err, con) => {
 const app = express();
 
 app.use(cors());
-app.use(express.static(path.join(__dirname,'uploads')));
+app.use(express.static(path.join(__dirname, 'uploads')));
 
 
 app.get('/', (req, res) => {
@@ -146,39 +146,39 @@ app.post('/sign-in', bodyParser.json(), (req, res) => {
 
 app.get('/getAllplaces', (req, res) => {
 
-        console.log(req.body)
-        var collection = connection.db(dbName).collection('places');
-         collection.find().toArray((err, docs) => {
-            console.log("docs found");
-            console.log(docs);
-            if (!err && docs.length > 0) {
-                res.send({ status: "ok", data: docs });
-            } else {
-                res.send({ status: "failed", data: err });
-            }
-        })
-
-
-
+    console.log(req.body)
+    var collection = connection.db(dbName).collection('places');
+    collection.find().toArray((err, docs) => {
+        console.log("docs found");
+        console.log(docs);
+        if (!err && docs.length > 0) {
+            res.send({ status: "ok", data: docs });
+        } else {
+            res.send({ status: "failed", data: err });
+        }
     })
-    // app.get('/getAllpackages', (req, res) => {
-
-//     console.log(req.body)
-//     var collection = connection.db(dbName).collection('packages');
-
-//     collection.find().toArray((err, docs) => {
-//         console.log("docs found");
-//         console.log(docs);
-//         if (!err && docs.length > 0) {
-//             res.send({ status: "ok", data: docs });
-//         } else {
-//             res.send({ status: "failed", data: err });
-//         }
-//     })
 
 
 
-// })
+})
+app.get('/getAllpackages', (req, res) => {
+
+    console.log(req.body)
+    var collection = connection.db(dbName).collection('packages');
+
+    collection.find().toArray((err, docs) => {
+        console.log("docs found");
+        console.log(docs);
+        if (!err && docs.length > 0) {
+            res.send({ status: "ok", data: docs });
+        } else {
+            res.send({ status: "failed", data: err });
+        }
+    })
+
+
+
+})
 
 
 
@@ -186,7 +186,7 @@ app.get('/getAllplaces', (req, res) => {
 
 
 app.get('/getAlldata', (req, res) => {
-
+    alert('hey')
     console.log(req.body)
     var collection = connection.db(dbName).collection('form');
 
@@ -297,18 +297,18 @@ app.post('/add', bodyParser.json(), (req, res) => {
 })
 
 app.post('/package', bodyParser.json(), (req, res) => {
-
+    console.log('add packages')
 
     console.log(req.body);
 
     var collection = connection.db(dbName).collection('packages');
 
     collection.find({}).toArray((err, docs) => {
-
+        console.log('found with package')
         console.log(docs);
 
-        if (!err && docs.length > 0) {
-            res.send({ status: "failed", data: "email already Exist" })
+        if (!err) {
+            res.send({ status: "failed", data: "" })
         } else {
 
             collection.insert(req.body, (err, result) => {
