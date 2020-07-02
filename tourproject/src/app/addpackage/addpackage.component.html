@@ -17,13 +17,24 @@
                 <input type="text" #packageNameref="ngModel" name="packageName" [(ngModel)]="packageName" class="form-control" placeholder="Enter package" id="pack">
             </div>
             <div class="form-group">
-                <label for="nights">Add No. of Nights</label>
-                <input type="number" #nightsref="ngModel" name="nights" [(ngModel)]="nights" class="form-control" placeholder="Enter no. of nights" id="nights">
+                <label for="nights">Add No. of days</label>
+                <input type="text" #daysref="ngModel" name="days" [(ngModel)]="days" class="form-control" placeholder="Enter no. of days" id="days">
             </div>
             <div class="form-group">
-                <label for="hotels">Hotels Name</label>
+                <label for="nights">Add No. of Nights</label>
+                <input type="text" #nightsref="ngModel" name="nights" [(ngModel)]="nights" class="form-control" placeholder="Enter no. of nights" id="nights">
+            </div>
+            <div class="form-group">
+                <label for="hotels">Hotel Name</label>
                 <input type="text" #hotelsrefu="ngModel" name="hotelsu" [(ngModel)]="hotelsu" class="form-control" placeholder="Enter hotel1 name" id="hotels">
+            </div>
+            <div class="form-group">
+                <label for="hotels">Hotel Name</label>
                 <input type="text" #hotelsref="ngModel" name="hotels" [(ngModel)]="hotels" class="form-control" placeholder="Enter hotel2 name" id="hotels">
+            </div>
+            <div class="form-group">
+                <label for="place">Add Description:</label>
+                <textarea type="message" #descref="ngModel" name="desc" [(ngModel)]="desc" class="form-control" placeholder="Description.." id="exampleFormControlTextarea1" rows="3"></textarea>
             </div>
             <div class="form-group">
                 <label for="email">Total Amount:</label>

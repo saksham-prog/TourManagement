@@ -38,6 +38,7 @@ import { AddplaceComponent } from './addplace/addplace.component';
 import { AddpackageComponent } from './addpackage/addpackage.component';
 import { ListplacesComponent } from './listplaces/listplaces.component';
 import { ListpackagesComponent } from './listpackages/listpackages.component';
+import { ViewBookingComponent } from './view-booking/view-booking.component';
 
 
 @NgModule({
@@ -76,7 +77,8 @@ import { ListpackagesComponent } from './listpackages/listpackages.component';
     AddplaceComponent,
     AddpackageComponent,
     ListplacesComponent,
-    ListpackagesComponent
+    ListpackagesComponent,
+    ViewBookingComponent
 
   ],
   imports: [

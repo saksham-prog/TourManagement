@@ -32,6 +32,7 @@ import { BookingComponent } from './booking/booking.component';
 import { Search2Component } from './search2/search2.component'
 import { AddplaceComponent } from './addplace/addplace.component';
 import { AddpackageComponent } from './addpackage/addpackage.component';
+import { ViewBookingComponent } from './view-booking/view-booking.component';
 
 
 const routes: Routes = [
@@ -78,6 +79,7 @@ const routes: Routes = [
   children:[
     {path:"addplace", component:AddplaceComponent },
     {path:"addpackage", component: AddpackageComponent },
+    {path:"view-booking", component: ViewBookingComponent },
     
   ]
 },

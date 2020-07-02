@@ -180,13 +180,7 @@ app.get('/getAllpackages', (req, res) => {
 
 })
 
-
-
-
-
-
-app.post('/getAlldata', (req, res) => {
-
+app.post('/getAlldata', bodyParser.json(), (req, res) => {
     console.log(req.body)
     var collection = connection.db(dbName).collection('form');
 
@@ -204,6 +198,31 @@ app.post('/getAlldata', (req, res) => {
 
 
 })
+app.post('/getAlldatas', bodyParser.json(), (req, res) => {
+    console.log(req.body)
+    var collection = connection.db(dbName).collection('form');
+
+    console.log(req.body)
+    collection.find({}).toArray((err, docs) => {
+        console.log("docs found");
+        console.log(docs);
+        if (!err && docs.length > 0) {
+            res.send({ status: "ok", data: docs });
+        } else {
+            res.send({ status: "failed", data: err });
+        }
+    })
+
+
+
+})
+
+
+
+
+
+
+
 
 
 app.post('/addPlace',
@@ -328,4 +347,4 @@ app.post('/packages', bodyParser.json(), (req, res) => {
 
 
 
-app.listen(3000, () => { console.log("server is listining on port 3000") });
+app.listen(3000, () => { console.log("server is listining on port 3000") })
