@@ -19,8 +19,11 @@ constructor( private router:Router, private ds:DataService) { }
   }
 
   packages()
-  {this.ds.packages({cityName:this.cityName, packageName:this.packageName, nights:this.nights, hotelsu:this.hotelsu, hotels:this.hotels, price:this.price})
-  .subscribe((response)=>{
+  {
+
+    alert({cityName:this.cityName, packageName:this.packageName, nights:this.nights, hotelsu:this.hotelsu, hotels:this.hotels, price:this.price})
+    this.ds.packages({cityName:this.cityName, packageName:this.packageName, nights:this.nights, hotelsu:this.hotelsu, hotels:this.hotels, price:this.price})
+             .subscribe((response)=>{
     console.log(response)
     alert(JSON.stringify(response))
     if(response.status=="ok")

@@ -30,7 +30,8 @@ export class BookingComponent implements OnInit {
     //    this.filteredData= d.data;
     //  })
    console.log("success")
-    this.loginEmail=localStorage.getItem('loginEmail');
+    this.loginEmail=localStorage.getItem('email');
+    alert(this.loginEmail);
     this.ds.fetchData({loginEmail:this.loginEmail}).subscribe((d)=>{
 
        alert("returned data"+JSON.stringify(d))

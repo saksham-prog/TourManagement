@@ -185,8 +185,8 @@ app.get('/getAllpackages', (req, res) => {
 
 
 
-app.post('/getAlldata', (req, res) => {
-    alert("returned data" + JSON.stringify(d))
+app.post('/getAlldata', bodyParser.json(), (req, res) => {
+    console.log(req.body)
     console.log(req.body)
     var collection = connection.db(dbName).collection('form');
 
