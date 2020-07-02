@@ -186,7 +186,7 @@ app.get('/getAllpackages', (req, res) => {
 
 
 app.get('/getAlldata', (req, res) => {
-    alert('hey')
+    alert(data)
     console.log(req.body)
     var collection = connection.db(dbName).collection('form');
 
@@ -304,7 +304,7 @@ app.post('/packages', bodyParser.json(), (req, res) => {
 
     var collection = connection.db(dbName).collection('packages');
 
-    collection.find({}).toArray((err, docs) => {
+    collection.find(req.body).toArray((err, docs) => {
         console.log("found with this email ");
         console.log(docs);
 
@@ -314,7 +314,7 @@ app.post('/packages', bodyParser.json(), (req, res) => {
 
             collection.insert(req.body, (err, result) => {
                 if (!err) {
-                    res.send({ status: "ok", data: "signup success" });
+                    res.send({ status: "ok", data: "" });
                 } else {
                     res.send({ status: "failed", data: err });
                 }

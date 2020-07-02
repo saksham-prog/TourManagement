@@ -27,9 +27,9 @@ export class DataService {
     return this.http.get('http://localhost:3000/getAllpackages')
   }
 
-  fetchData():any
+  fetchData(d):any
   {
-    return this.http.get('http://localhost:3000/getAlldata')
+    return this.http.post('http://localhost:3000/getAlldata',d)
   }
 
 

@@ -10,27 +10,28 @@ import { DataService } from '../data.service';
 export class BookingComponent implements OnInit {
   bookd;
   filteredformdata;
-  email;
+  
+  loginemail;
   form;
   searchdatet;
   constructor(private router: Router,private ds:DataService) { }
   ngOnInit(): void {
-    // alert("hello")
-    // if(!(localStorage.getItem('role')=="admin")){
+    alert("hello")
+    console.log('loginemail')
     //   this.email=  localStorage.getItem('email');
     //   this.ds.fetchData({email:this.email}).subscribe((d)=>{
     //     alert('ok')
     //     this.filteredData= d.data;
     //   })
-  // }
+  
    
     //  this.ds.fetchData({email:this.email}).subscribe((d)=>{
     //    alert('ok')
     //    this.filteredData= d.data;
     //  })
-   
-    this.searchdatet=localStorage.getItem('searchDate');
-    this.ds.fetchData().subscribe((d)=>{
+   console.log("success")
+    this.loginemail=localStorage.getItem('email');
+    this.ds.fetchData({loginemail:this.loginemail}).subscribe((d)=>{
 
        alert("returned data"+JSON.stringify(d))
       
@@ -41,7 +42,7 @@ export class BookingComponent implements OnInit {
     this.filteredformdata=   alldata.filter((p)=>{
      
       // alert("--"+p.city+"-"+this.ct+"--")  
-      return p.datet == this.searchdatet;
+      return p.loginemail == this.loginemail;
 
       })
 
@@ -55,9 +56,10 @@ export class BookingComponent implements OnInit {
 
 
   }
-fetchData(){
-  alert("input value"  + this.bookd );
-    localStorage.setItem('bookingdate', this.bookd);
+// fetchData(){
+//   alert("input value"  + this.bookd );
+//   console.log("welcome")
+//   localStorage.setItem('bookingdate', this.bookd);
      
-}
+// }
 }
