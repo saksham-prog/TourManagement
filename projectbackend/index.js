@@ -186,7 +186,7 @@ app.get('/getAllpackages', (req, res) => {
 
 
 app.get('/getAlldata', (req, res) => {
-    alert(data)
+    alert("returned data" + JSON.stringify(d))
     console.log(req.body)
     var collection = connection.db(dbName).collection('form');
 
