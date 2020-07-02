@@ -11,7 +11,7 @@ export class BookingComponent implements OnInit {
   bookd;
   filteredformdata;
   
-  loginemail;
+  loginEmail;
   form;
   searchdatet;
   constructor(private router: Router,private ds:DataService) { }
@@ -30,8 +30,8 @@ export class BookingComponent implements OnInit {
     //    this.filteredData= d.data;
     //  })
    console.log("success")
-    this.loginemail=localStorage.getItem('email');
-    this.ds.fetchData({loginemail:this.loginemail}).subscribe((d)=>{
+    this.loginEmail=localStorage.getItem('loginEmail');
+    this.ds.fetchData({loginEmail:this.loginEmail}).subscribe((d)=>{
 
        alert("returned data"+JSON.stringify(d))
       
@@ -42,7 +42,7 @@ export class BookingComponent implements OnInit {
     this.filteredformdata=   alldata.filter((p)=>{
      
       // alert("--"+p.city+"-"+this.ct+"--")  
-      return p.loginemail == this.loginemail;
+      return p.loginEmail == this.loginEmail;
 
       })
 

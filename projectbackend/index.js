@@ -185,13 +185,13 @@ app.get('/getAllpackages', (req, res) => {
 
 
 
-app.get('/getAlldata', (req, res) => {
+app.post('/getAlldata', (req, res) => {
     alert("returned data" + JSON.stringify(d))
     console.log(req.body)
     var collection = connection.db(dbName).collection('form');
 
 
-    collection.find({ email: req.body.email }).toArray((err, docs) => {
+    collection.find({ loginEmail: req.body.loginEmail }).toArray((err, docs) => {
         console.log("docs found");
         console.log(docs);
         if (!err && docs.length > 0) {
