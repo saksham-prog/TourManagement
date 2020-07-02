@@ -41,7 +41,7 @@ export class dashheaderComponent implements OnInit {
 
   fetchPlaces()
   {
-    alert("input value"+ this.ctName);
+    alert("input value"     + this.ctName);
     localStorage.setItem('searchCity', this.ctName);
      this.router.navigate(['/search']) ;
      

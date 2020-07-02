@@ -19,13 +19,14 @@ export class FormComponent implements OnInit {
   amountProp;
   dateProp;
   datePropsu;
+  datePropt;
   constructor( private router:Router, private ds:DataService) { }
 
   ngOnInit(): void {
   }
 
 add()
-  {this.ds.add({name:this.nameProp,mobile:this.mobileProp, loginEmail:localStorage.getItem('email'), email:this.emailProp, message:this.messageProp, place:this.placeProp, state:this.stateProp, adult:this.adultProp, child:this.childProp, amount:this.amountProp, date:this.dateProp, datesu:this.datePropsu})
+  {this.ds.add({datet:this.datePropt,name:this.nameProp,mobile:this.mobileProp, loginEmail:localStorage.getItem('email'), email:this.emailProp, message:this.messageProp, place:this.placeProp, state:this.stateProp, adult:this.adultProp, child:this.childProp, amount:this.amountProp, date:this.dateProp, datesu:this.datePropsu})
   .subscribe((response)=>{
     if(response.status=="ok")
     {

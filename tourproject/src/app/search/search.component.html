@@ -1,10 +1,10 @@
 <!-- <div class="products"> -->
 <div class="item" *ngFor="let p of filteredformdata">
-    {{p|json}}
-    <img src="http://localhost:3000/{{p._id}}_banner_NaN.jpg" alt="">
-    <img src="http://localhost:3000/{{p._id}}_sliderImages_1.jpg" alt="">
-    <p>PLACES: <br>{{p.placeName}} </p>
     <p>CITY: {{p.cityName}}</p>
+    <img src="http://localhost:3000/{{p._id}}_banner_NaN.jpg" alt="">
+    <!-- <img src="http://localhost:3000/{{p._id}}_sliderImages_1.jpg" alt=""> -->
+    <p>PLACES: <br>{{p.placeName}} </p>
+    <!-- <p>CITY: {{p.cityName}}</p> -->
     <p>HOTELS: {{p.stateName}}</p>
     <p>TOTAL TOUR PACKAGE AMOUNT: {{p.desc}}</p>
     <p>{{p.uploads}}</p>

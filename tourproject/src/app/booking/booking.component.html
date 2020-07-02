@@ -2,9 +2,11 @@
 
 
 <table class="table">
+    <input class="text" [(ngModel)]="bookd" name="bookd" type="date">
+    <button click="fetchData()" class="">click</button>
     <thead class="thead-dark">
         <tr>
-            
+            <th scope="col">Booking Date</th>
             <th scope="col">Name</th>
             <th scope="col">Email</th>
             <th scope="col">Mobile</th>
@@ -18,8 +20,8 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let p of filteredData">
-         
+        <tr *ngFor="let p of filteredformdata">
+
             <td>{{p.name}}</td>
             <td>{{p.email}}</td>
             <td>{{p.mobile}}</td>

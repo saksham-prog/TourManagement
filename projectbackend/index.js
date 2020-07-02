@@ -296,19 +296,20 @@ app.post('/add', bodyParser.json(), (req, res) => {
 
 })
 
-app.post('/package', bodyParser.json(), (req, res) => {
-    console.log('add packages')
 
+app.post('/packages', bodyParser.json(), (req, res) => {
+
+    console.log("sign up for user..")
     console.log(req.body);
 
     var collection = connection.db(dbName).collection('packages');
 
     collection.find({}).toArray((err, docs) => {
-        console.log('found with package')
+        console.log("found with this email ");
         console.log(docs);
 
-        if (!err) {
-            res.send({ status: "failed", data: "" })
+        if (!err && docs.length > 0) {
+            res.send({ status: "failed", data: "email already Exist" })
         } else {
 
             collection.insert(req.body, (err, result) => {
@@ -321,9 +322,7 @@ app.post('/package', bodyParser.json(), (req, res) => {
 
         }
     })
-
 })
-
 
 
 

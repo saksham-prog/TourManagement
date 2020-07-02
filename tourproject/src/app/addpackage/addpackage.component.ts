@@ -18,11 +18,12 @@ constructor( private router:Router, private ds:DataService) { }
   ngOnInit(): void {
   }
 
-  package()
-  {this.ds.package({cityName:this.cityName, packageName:this.packageName, nights:this.nights, hotelsu:this.hotelsu, hotels:this.hotels, price:this.price})
+  packages()
+  {this.ds.packages({cityName:this.cityName, packageName:this.packageName, nights:this.nights, hotelsu:this.hotelsu, hotels:this.hotels, price:this.price})
   .subscribe((response)=>{
-    alert('ok');
-    if(response == "ok")
+    console.log(response)
+    alert(JSON.stringify(response))
+    if(response.status=="ok")
     {
       alert('Your details are submitted');
       
