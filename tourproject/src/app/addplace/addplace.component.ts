@@ -41,10 +41,10 @@ this.banner= e.target.files[0];
         formdata.set('stateName', this.stateName);
         formdata.set('desc', this.desc);
         formdata.set('banner', this.banner);
-        for(var i =0; i<this.sliderImages.length; i++)
-        {
-          formdata.append('sliderImages', this.sliderImages[i], this.sliderImages[i]['name']);
-        }
+        // for(var i =0; i<this.sliderImages.length; i++)
+        // {
+        //   formdata.append('sliderImages', this.sliderImages[i], this.sliderImages[i]['name']);
+        // }
         this.ds.addPlace(formdata).subscribe((d)=>{
           // alert(JSON.stringify(d));
         })
