@@ -29,9 +29,12 @@ export class DataService {
 
   fetchData(d):any
   {
-    return this.http.post('http://localhost:3000/getAlldata', d)
+    return this.http.post('http://localhost:3000/getAlldata',d)
   }
-
+  fetchDatas(d):any
+  {
+    return this.http.post('http://localhost:3000/getAlldatas',d)
+  }
 
   signUp(d):any
   {
@@ -52,9 +55,9 @@ export class DataService {
   {
     return this.http.post('http://localhost:3000/add', d);
   }
-  package(d):any
+  packages(d):any
   {
-    return this.http.post('http://localhost:3000/package', d);
+    return this.http.post('http://localhost:3000/packages', d);
   }
   addPlace(d):any
   {

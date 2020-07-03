@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
+import { DataService } from '../data.service';
 @Component({
   selector: 'app-listplaces',
   templateUrl: './listplaces.component.html',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListplacesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router,private ds:DataService) { }
 
-  ngOnInit(): void {
+  ngOnInit():void {
+    
+
   }
 
 }

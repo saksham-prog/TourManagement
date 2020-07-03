@@ -1,6 +1,7 @@
 <!-- <div class="products"> -->
 
 
+
 <div class="container">
 
 <div class="flexbox" *ngFor="let p of filteredformdata">
@@ -25,31 +26,69 @@
 
 </div>
 </div>
-
+ 
 
 <!-- <div class="item" *ngFor="let p of filteredformdata">
    
     <img src="http://localhost:3000/{{p._id}}_banner_NaN.jpg" alt="">
    
-    <p>PLACES: <br>{{p.placeName}} </p>
+
+ <div class="item" *ngFor="let p of filteredformdata">
     <p>CITY: {{p.cityName}}</p>
+    <img src="http://localhost:3000/{{p._id}}_banner_NaN.jpg" alt="">
+    <img src="http://localhost:3000/{{p._id}}_sliderImages_1.jpg" alt="">  -->
+
+    <!-- <p>PLACES: <br>{{p.placeName}} </p>
     <p>HOTELS: {{p.stateName}}</p>
     <p>TOTAL TOUR PACKAGE AMOUNT: {{p.desc}}</p>
-    <p>{{p.uploads}}</p>
-    <button routerLink="/dashboard">ok</button>
-</div>
+    <p>{{p.uploads}}</p> 
+    <button routerLink="/dashboard">ok</button> -->
+<!-- </div> -->
+
+<div class="container">
 
 <div class="item" *ngFor="let p of filteredpackages">
+
+    <table>
+        <tr>
+          <th><b>Package </b></th>
+          <th><b>City</b></th>
+          <th><b>Days</b></th>
+          <th><b>Nights</b></th>
+          <th><b>Hotels</b></th>
+          <th><b>Price</b></th>
+        </tr>
+        <tr>
+          <td>{{p.packageName}}</td>
+          <td> {{p.cityName}}</td>
+          <td>{{p.days}}</td>
+          <td>{{p.nights}}</td>
+          <td>{{p.hotelsu}}</td>
+          <td>{{p.price}}</td>
+        </tr>
+        <tr>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>{{p.hotels}}</td>
+          <td>-</td>
+        </tr>
     
+      </table>
+      
+</div>
+<p></p>
 
-    <p>PLACES: <br>{{p.packageName}} </p>
-    <p>CITY: {{p.cityName}}</p>
-    <p>HOTELS: {{p.nights}}</p>
-    <p>TOTAL TOUR PACKAGE AMOUNT: {{p.hotelsu}}</p>
-    <p>{{p.uploads}}</p>
-    <button routerLink="/dashboard">ok</button>
-</div> -->
+<div class="footer">
 
+<h5>If you like any Package, then press Ok for Booking: <br></h5>
+<p></p>
+<button routerLink="/form" type="button" class="btn btn-dark">Ok</button>
+</div>
+
+</div>
+<p></p>
 
 <!-- <app-search class="item" *ngFor="let p of filteredPlaces"></app-search> -->
 
@@ -86,6 +125,3 @@
     </div>
 </div> -->
 
-<h5>IF YOU LIKE THIS PACKAGE PRESS OK</h5>
-<P>GO TO BOOK NOW</P>
-<button routerLink="/dashboard" type="button" class="btn btn-warning">OK</button>

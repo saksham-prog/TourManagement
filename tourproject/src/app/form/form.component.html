@@ -6,6 +6,11 @@
         <div class="Detail Form">
             <form #f="ngForm">
                 <div class="form-group">
+
+                    <label for="date">Date Of Booking</label>
+                    <input #datereft="ngModel" [(ngModel)]="datePropt" name="datet" type="date" class="form-control" placeholder="Enter booking date" id="date">
+                </div>
+                <div class="form-group">
                     <label for="place">Add Destination:</label>
                     <input #placeref="ngModel" [(ngModel)]="placeProp" name="place" type="text" class="form-control" placeholder="Enter place" id="place">
                 </div>
@@ -41,6 +46,14 @@
                 <div class="form-group">
                     <label for="date">To Date:</label>
                     <input #daterefsu="ngModel" [(ngModel)]="datePropsu" name="datesu" type="date" class="form-control" placeholder="date" id="date">
+                </div>
+                <label for="date">Package Select</label>
+                <div class="form-check">
+
+                    <input #packageref1="ngModel" [(ngModel)]="packageProp1" name="package1" type="checkbox" class="form-check-input" placeholder="package1" id="defaultCheck2">
+                    <h6>package1</h6>
+                    <input #packageref2="ngModel" [(ngModel)]="packageProp2" name="package2" type="checkbox" class="form-check-input" placeholder="package2" id="defaultCheck2">
+                    <h6>package2</h6>
                 </div>
                 <div class="form-group">
                     <label for="amount">Total Package Amount</label>

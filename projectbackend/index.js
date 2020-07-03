@@ -180,18 +180,12 @@ app.get('/getAllpackages', (req, res) => {
 
 })
 
-
-
-
-
-
-app.get('/getAlldata', (req, res) => {
-    alert('hey')
+app.post('/getAlldata', bodyParser.json(), (req, res) => {
     console.log(req.body)
     var collection = connection.db(dbName).collection('form');
 
 
-    collection.find({ email: req.body.email }).toArray((err, docs) => {
+    collection.find({ loginEmail: req.body.loginEmail }).toArray((err, docs) => {
         console.log("docs found");
         console.log(docs);
         if (!err && docs.length > 0) {
@@ -204,6 +198,31 @@ app.get('/getAlldata', (req, res) => {
 
 
 })
+app.post('/getAlldatas', bodyParser.json(), (req, res) => {
+    console.log(req.body)
+    var collection = connection.db(dbName).collection('form');
+
+    console.log(req.body)
+    collection.find({}).toArray((err, docs) => {
+        console.log("docs found");
+        console.log(docs);
+        if (!err && docs.length > 0) {
+            res.send({ status: "ok", data: docs });
+        } else {
+            res.send({ status: "failed", data: err });
+        }
+    })
+
+
+
+})
+
+
+
+
+
+
+
 
 
 app.post('/addPlace',
@@ -296,24 +315,25 @@ app.post('/add', bodyParser.json(), (req, res) => {
 
 })
 
-app.post('/package', bodyParser.json(), (req, res) => {
-    console.log('add packages')
 
+app.post('/packages', bodyParser.json(), (req, res) => {
+
+    console.log("sign up for user..")
     console.log(req.body);
 
     var collection = connection.db(dbName).collection('packages');
 
-    collection.find({}).toArray((err, docs) => {
-        console.log('found with package')
+    collection.find(req.body).toArray((err, docs) => {
+        console.log("found with this email ");
         console.log(docs);
 
-        if (!err) {
-            res.send({ status: "failed", data: "" })
+        if (!err && docs.length > 0) {
+            res.send({ status: "failed", data: "email already Exist" })
         } else {
 
             collection.insert(req.body, (err, result) => {
                 if (!err) {
-                    res.send({ status: "ok", data: "signup success" });
+                    res.send({ status: "ok", data: "" });
                 } else {
                     res.send({ status: "failed", data: err });
                 }
@@ -321,12 +341,10 @@ app.post('/package', bodyParser.json(), (req, res) => {
 
         }
     })
-
 })
 
 
 
 
 
-
-app.listen(3000, () => { console.log("server is listining on port 3000") });
+app.listen(3000, () => { console.log("server is listining on port 3000") })
