@@ -1,8 +1,36 @@
 <!-- <div class="products"> -->
-<div class="item" *ngFor="let p of filteredformdata">
-    {{p|json}}
+
+
+<div class="container">
+
+<div class="flexbox" *ngFor="let p of filteredformdata">
+
+   
+
+    <div ><li type="button" >
+        <h4>{{p.placeName}}</h4>
+        <p></p>
+        <img src="http://localhost:3000/{{p._id}}_banner_NaN.jpg" alt=""  width="375px" height="275px" class="img-responsive floating-image right">
+    
+        <p></p>
+        <p><em> {{p.desc}} </em></p>
+    </li></div>
+
+    
+    
+   
+
+     
+
+
+</div>
+</div>
+
+
+<!-- <div class="item" *ngFor="let p of filteredformdata">
+   
     <img src="http://localhost:3000/{{p._id}}_banner_NaN.jpg" alt="">
-    <img src="http://localhost:3000/{{p._id}}_sliderImages_1.jpg" alt="">
+   
     <p>PLACES: <br>{{p.placeName}} </p>
     <p>CITY: {{p.cityName}}</p>
     <p>HOTELS: {{p.stateName}}</p>
@@ -12,7 +40,7 @@
 </div>
 
 <div class="item" *ngFor="let p of filteredpackages">
-    {{p|json}}
+    
 
     <p>PLACES: <br>{{p.packageName}} </p>
     <p>CITY: {{p.cityName}}</p>
@@ -20,7 +48,9 @@
     <p>TOTAL TOUR PACKAGE AMOUNT: {{p.hotelsu}}</p>
     <p>{{p.uploads}}</p>
     <button routerLink="/dashboard">ok</button>
-</div>
+</div> -->
+
+
 <!-- <app-search class="item" *ngFor="let p of filteredPlaces"></app-search> -->
 
 <!-- </div> -->

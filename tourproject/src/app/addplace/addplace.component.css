@@ -1,6 +1,6 @@
 h1 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: white;
+    color: black;
     font-size: 80px;
     font-weight: bold;
     text-align: center;
@@ -9,7 +9,7 @@ h1 {
 }
 
 label {
-    color: white;
+    color: black;
     font-size: small;
     font-weight: bold;
     font-family: sans-serif;
@@ -22,7 +22,7 @@ button {
 
 section {
     padding: 0 100px;
-    background: url(../../assets/images/ladakh4.jpg);
+    background: url(../../assets/images/background3.jpg);
     height: 100%;
     display: flex;
     justify-content: center;
