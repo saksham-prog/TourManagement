@@ -198,12 +198,12 @@ app.post('/getAlldata', bodyParser.json(), (req, res) => {
 
 
 })
-app.post('/getAlldatas', bodyParser.json(), (req, res) => {
+app.get('/getAlldatas', (req, res) => {
     console.log(req.body)
     var collection = connection.db(dbName).collection('form');
 
     console.log(req.body)
-    collection.find({}).toArray((err, docs) => {
+    collection.find().toArray((err, docs) => {
         console.log("docs found");
         console.log(docs);
         if (!err && docs.length > 0) {
@@ -216,6 +216,84 @@ app.post('/getAlldatas', bodyParser.json(), (req, res) => {
 
 
 })
+app.get('/getplaces', (req, res) => {
+    console.log(req.body)
+    var collection = connection.db(dbName).collection('places');
+
+    console.log(req.body)
+    collection.find().toArray((err, docs) => {
+        console.log("docs found");
+        console.log(docs);
+        if (!err && docs.length > 0) {
+            res.send({ status: "ok", data: docs });
+        } else {
+            res.send({ status: "failed", data: err });
+        }
+    })
+
+
+
+})
+
+app.get('/getpackages', (req, res) => {
+    console.log(req.body)
+    var collection = connection.db(dbName).collection('packages');
+
+    console.log(req.body)
+    collection.find().toArray((err, docs) => {
+        console.log("docs found");
+        console.log(docs);
+        if (!err && docs.length > 0) {
+            res.send({ status: "ok", data: docs });
+        } else {
+            res.send({ status: "failed", data: err });
+        }
+    })
+
+
+
+})
+
+app.get('/getuser', (req, res) => {
+    console.log(req.body)
+    var collection = connection.db(dbName).collection('tour');
+
+    console.log(req.body)
+    collection.find().toArray((err, docs) => {
+        console.log("docs found");
+        console.log(docs);
+        if (!err && docs.length > 0) {
+            res.send({ status: "ok", data: docs });
+        } else {
+            res.send({ status: "failed", data: err });
+        }
+    })
+
+
+
+})
+
+app.get('/getenquiry', (req, res) => {
+    console.log(req.body)
+    var collection = connection.db(dbName).collection('enquiry');
+
+    console.log(req.body)
+    collection.find().toArray((err, docs) => {
+        console.log("docs found");
+        console.log(docs);
+        if (!err && docs.length > 0) {
+            res.send({ status: "ok", data: docs });
+        } else {
+            res.send({ status: "failed", data: err });
+        }
+    })
+
+
+
+})
+
+
+
 
 
 

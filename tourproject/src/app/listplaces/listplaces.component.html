@@ -1,1 +1,26 @@
-<p>listplaces works!</p>
+<table class="table">
+    <!-- <input class="text" [(ngModel)]="bookd" name="bookd" type="date">
+    <button click="fetchData()" class="">click</button> -->
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Place Name</th>
+            <th scope="col">City Name</th>
+            <th scope="col">State Name</th>
+            <th scope="col">Description</th>
+            <!-- <th scope="col">Place</th> -->
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of filteredplaces">
+            <td>{{p.placeName}}</td>
+            <td>{{p.cityName}}</td>
+            <td>{{p.stateName}}</td>
+            <td>{{p.desc}}</td>
+            <!-- <td>{{p.place}}</td> -->
+
+        </tr>
+
+
+    </tbody>
+</table>

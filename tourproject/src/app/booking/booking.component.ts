@@ -16,8 +16,9 @@ export class BookingComponent implements OnInit {
   searchdatet;
   constructor(private router: Router,private ds:DataService) { }
   ngOnInit(): void {
-    alert("hello")
-    console.log('loginemail')
+
+    // alert("hello");
+    // console.log('loginemail')
     //   this.email=  localStorage.getItem('email');
     //   this.ds.fetchData({email:this.email}).subscribe((d)=>{
     //     alert('ok')
@@ -34,7 +35,7 @@ export class BookingComponent implements OnInit {
     alert(this.loginEmail);
     this.ds.fetchData({loginEmail:this.loginEmail}).subscribe((d)=>{
 
-       alert("returned data"+JSON.stringify(d))
+      //  alert("returned data"+JSON.stringify(d))
       
 
     var alldata = d.data;
@@ -47,7 +48,7 @@ export class BookingComponent implements OnInit {
 
       })
 
-      alert("this is filtered"+JSON.stringify(this.filteredformdata))
+      // alert("this is filtered"+JSON.stringify(this.filteredformdata))
 
     })
 

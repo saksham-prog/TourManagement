@@ -31,11 +31,26 @@ export class DataService {
   {
     return this.http.post('http://localhost:3000/getAlldata',d)
   }
-  fetchDatas(d):any
+  fetchDatas():any
   {
-    return this.http.post('http://localhost:3000/getAlldatas',d)
+    return this.http.get('http://localhost:3000/getAlldatas')
   }
-
+  fetchplaces():any
+  {
+    return this.http.get('http://localhost:3000/getplaces')
+  }
+  fetchpackages():any
+  {
+    return this.http.get('http://localhost:3000/getpackages')
+  }
+  fetchuser():any
+  {
+    return this.http.get('http://localhost:3000/getuser')
+  }
+  fetchenquiry():any
+  {
+    return this.http.get('http://localhost:3000/getenquiry')
+  }
   signUp(d):any
   {
     return this.http.post('http://localhost:3000/sign-up', d);

@@ -1,0 +1,26 @@
+<table class="table">
+    <!-- <input class="text" [(ngModel)]="bookd" name="bookd" type="date">
+    <button click="fetchData()" class="">click</button> -->
+    <thead class="thead-dark">
+        <tr>
+
+            <th scope="col">Role</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Mobile Number</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of filtereduser">
+            <td>{{p.role}}</td>
+            <td>{{p.name}}</td>
+            <td>{{p.email}}</td>
+            <td>{{p.mobile}}</td>
+
+
+        </tr>
+
+
+    </tbody>
+</table>

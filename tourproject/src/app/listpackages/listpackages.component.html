@@ -1,1 +1,30 @@
-<p>listpackages works!</p>
+<table class="table">
+    <!-- <input class="text" [(ngModel)]="bookd" name="bookd" type="date">
+    <button click="fetchData()" class="">click</button> -->
+    <thead class="thead-dark">
+        <tr>
+
+            <th scope="col">City Name</th>
+            <th scope="col">Package Name</th>
+            <th scope="col">Days</th>
+            <th scope="col">Nights</th>
+            <th scope="col">Hotel Name1</th>
+            <th scope="col">Hotel Name2</th>
+            <th scope="col">Package Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of filteredpackages">
+            <td>{{p.cityName}}</td>
+            <td>{{p.packageName}}</td>
+            <td>{{p.days}}</td>
+            <td>{{p.nights}}</td>
+            <td>{{p.hotels}}</td>
+            <td>{{p.hotelsu}}</td>
+            <td>{{p.price}}</td>
+
+        </tr>
+
+
+    </tbody>
+</table>

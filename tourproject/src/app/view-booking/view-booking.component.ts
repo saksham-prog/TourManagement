@@ -11,33 +11,19 @@ export class ViewBookingComponent implements OnInit {
   bookd;
   filteredformdata;
   
-  loginEmail;
+ loginEmail;
   form;
   searchdatet;
   constructor(private router: Router,private ds:DataService) { }
   ngOnInit(): void {
-    alert("hello")
-    console.log('loginemail')
-   
-   console.log("success")
-     this.loginEmail=localStorage.getItem('email');
-    alert(this.loginEmail);
-    this.ds.fetchDatas({}).subscribe((d)=>{
-
-       alert("returned data"+JSON.stringify(d))
-      
-
-    var alldata = d.data;
+   this.ds.fetchDatas().subscribe((d)=>{
+alert("returned data"+JSON.stringify(d))
+      var alldata = d.data;
     console.log(alldata);
     
-    this.filteredformdata=   alldata.filter((p)=>{
-     
-       
-      return p.loginEmail == this.loginEmail;
+    this.filteredformdata=alldata;
 
-      })
-
-      alert("this is filtered"+JSON.stringify(this.filteredformdata))
+   
 
     })
 

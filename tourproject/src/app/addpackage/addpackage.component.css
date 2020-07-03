@@ -2,6 +2,8 @@ h1 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: black;
     font-size: 60px;
+    color: royalblue;
+    font-size: 80px;
     font-weight: bold;
     text-align: center;
     margin-right: 10px;
@@ -10,6 +12,7 @@ h1 {
 
 label {
     color:black;
+    color: rebeccapurple;
     font-size: small;
     font-weight: bold;
     font-family: sans-serif;
@@ -23,6 +26,7 @@ button {
 section {
     padding: 0 100px;
     background: url(../../assets/images/background1.jpg);
+    background: url(../../assets/images/background3.jpg);
     height: 100%;
     display: flex;
     justify-content: center;

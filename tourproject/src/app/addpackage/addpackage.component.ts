@@ -22,8 +22,6 @@ constructor( private router:Router, private ds:DataService) { }
 
   packages()
   {
-
-    alert({cityName:this.cityName, packageName:this.packageName, nights:this.nights, hotelsu:this.hotelsu, hotels:this.hotels, price:this.price})
     this.ds.packages({desc:this.desc,days:this.days, cityName:this.cityName, packageName:this.packageName, nights:this.nights, hotelsu:this.hotelsu, hotels:this.hotels, price:this.price})
              .subscribe((response)=>{
     console.log(response)

@@ -37,7 +37,7 @@ add()
 
       this.router.navigate(['/dashboard']);
 
-      this.router.navigate(['/']);
+      
     }
     
   })
