@@ -33,6 +33,11 @@ import { Search2Component } from './search2/search2.component'
 import { AddplaceComponent } from './addplace/addplace.component';
 import { AddpackageComponent } from './addpackage/addpackage.component';
 import { ViewBookingComponent } from './view-booking/view-booking.component';
+import { ListplacesComponent } from './listplaces/listplaces.component';
+import { ListpackagesComponent } from './listpackages/listpackages.component';
+import { ViewUserComponent } from './view-user/view-user.component';
+import { ViewEnquiryComponent } from './view-enquiry/view-enquiry.component';
+
 
 
 const routes: Routes = [
@@ -80,6 +85,10 @@ const routes: Routes = [
     {path:"addplace", component:AddplaceComponent },
     {path:"addpackage", component: AddpackageComponent },
     {path:"view-booking", component: ViewBookingComponent },
+    {path:"listplaces", component: ListplacesComponent },
+    {path:"listpackages", component: ListpackagesComponent },
+    {path:"view-user", component: ViewUserComponent },
+    {path:"view-enquiry", component: ViewEnquiryComponent },
     
   ]
 },

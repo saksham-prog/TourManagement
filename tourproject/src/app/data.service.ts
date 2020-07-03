@@ -43,7 +43,14 @@ export class DataService {
   {
     return this.http.get('http://localhost:3000/getpackages')
   }
-
+  fetchuser():any
+  {
+    return this.http.get('http://localhost:3000/getuser')
+  }
+  fetchenquiry():any
+  {
+    return this.http.get('http://localhost:3000/getenquiry')
+  }
   signUp(d):any
   {
     return this.http.post('http://localhost:3000/sign-up', d);

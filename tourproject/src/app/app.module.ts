@@ -39,6 +39,8 @@ import { AddpackageComponent } from './addpackage/addpackage.component';
 import { ListplacesComponent } from './listplaces/listplaces.component';
 import { ListpackagesComponent } from './listpackages/listpackages.component';
 import { ViewBookingComponent } from './view-booking/view-booking.component';
+import { ViewUserComponent } from './view-user/view-user.component';
+import { ViewEnquiryComponent } from './view-enquiry/view-enquiry.component';
 
 
 @NgModule({
@@ -78,7 +80,9 @@ import { ViewBookingComponent } from './view-booking/view-booking.component';
     AddpackageComponent,
     ListplacesComponent,
     ListpackagesComponent,
-    ViewBookingComponent
+    ViewBookingComponent,
+    ViewUserComponent,
+    ViewEnquiryComponent
 
   ],
   imports: [

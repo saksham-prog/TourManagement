@@ -3,32 +3,22 @@
     <button click="fetchData()" class="">click</button> -->
     <thead class="thead-dark">
         <tr>
-            <th scope="col">Booking Date</th>
-            <th scope="col">Name</th>
-            <th scope="col">Email</th>
-            <th scope="col">Mobile</th>
-            <th scope="col">Place</th>
-            <th scope="col">No.Of Adults</th>
-            <th scope="col">No.Of Children</th>
-            <th scope="col">Message</th>
-            <th scope="col">From Date</th>
-            <th scope="col">To Date</th>
-            <th scope="col">Amount</th>
+            <th scope="col">Place Name</th>
+            <th scope="col">City Name</th>
+            <th scope="col">State Name</th>
+            <th scope="col">Description</th>
+            <!-- <th scope="col">Place</th> -->
+
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let p of filteredplaces">
-            <td>{{p.datet}}</td>
-            <td>{{p.name}}</td>
-            <td>{{p.email}}</td>
-            <td>{{p.mobile}}</td>
-            <td>{{p.place}}</td>
-            <td>{{p.adult}}</td>
-            <td>{{p.child}}</td>
-            <td>{{p.message}}</td>
-            <td>{{p.date}}</td>
-            <td>{{p.datesu}}</td>
-            <td>{{p.amount}}</td>
+            <td>{{p.placeName}}</td>
+            <td>{{p.cityName}}</td>
+            <td>{{p.stateName}}</td>
+            <td>{{p.desc}}</td>
+            <!-- <td>{{p.place}}</td> -->
+
         </tr>
 
 
