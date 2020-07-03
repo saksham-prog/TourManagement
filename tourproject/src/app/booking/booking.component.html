@@ -1,9 +1,8 @@
-<p></p>
+<h1>BOOKING DETAILS</h1>
 
 <table class="table">
-    <!-- <input class="text" [(ngModel)]="bookd" name="bookd" type="date">
-    <button click="fetchData()" class="">click</button> -->
-    <thead class="thead-dark">
+
+    <thead>
         <tr>
             <th scope="col">Booking Date</th>
             <th scope="col">Name</th>
@@ -20,8 +19,8 @@
             <th scope="col">Amount</th>
         </tr>
     </thead>
-    <tbody>
-        <tr *ngFor="let p of filteredformdata">
+    <thead class="thead-light" *ngFor="let p of filteredformdata">
+        <tr>
             <td>{{p.datet}}</td>
             <td>{{p.name}}</td>
             <td>{{p.email}}</td>
@@ -38,10 +37,9 @@
         </tr>
 
 
-    </tbody>
-   <p></p>
+    </thead>
+
 
 </table>
+<p></p>
 <button routerLink="/dashboard" type="button" class="btn btn-info">Okay</button>
-
-
