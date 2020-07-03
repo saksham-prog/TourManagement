@@ -31,9 +31,9 @@ export class DataService {
   {
     return this.http.post('http://localhost:3000/getAlldata',d)
   }
-  fetchDatas(d):any
+  fetchDatas():any
   {
-    return this.http.post('http://localhost:3000/getAlldatas',d)
+    return this.http.get('http://localhost:3000/getAlldatas')
   }
 
   signUp(d):any

@@ -34,7 +34,7 @@ export class BookingComponent implements OnInit {
     alert(this.loginEmail);
     this.ds.fetchData({loginEmail:this.loginEmail}).subscribe((d)=>{
 
-       alert("returned data"+JSON.stringify(d))
+      //  alert("returned data"+JSON.stringify(d))
       
 
     var alldata = d.data;
@@ -47,7 +47,7 @@ export class BookingComponent implements OnInit {
 
       })
 
-      alert("this is filtered"+JSON.stringify(this.filteredformdata))
+      // alert("this is filtered"+JSON.stringify(this.filteredformdata))
 
     })
 

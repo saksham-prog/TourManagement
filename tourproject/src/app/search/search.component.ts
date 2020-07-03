@@ -18,7 +18,7 @@ export class SearchComponent implements OnInit {
     this.searchCityName=localStorage.getItem('searchCity');
     this.ds.fetchPlaces().subscribe((d)=>{
 
-       alert("returned data"+JSON.stringify(d))
+      //  alert("returned data"+JSON.stringify(d))
       
 
     var allplaceName = d.data;
@@ -31,7 +31,7 @@ export class SearchComponent implements OnInit {
 
       })
 
-      alert("this is filtered"+JSON.stringify(this.filteredformdata))
+      // alert("this is filtered"+JSON.stringify(this.filteredformdata))
 
     })
 
@@ -39,7 +39,7 @@ export class SearchComponent implements OnInit {
     this.searchCityName=localStorage.getItem('searchCity');
     this.ds.fetchPackages().subscribe((d)=>{
 
-       alert("returned data"+JSON.stringify(d))
+      //  alert("returned data"+JSON.stringify(d))
       
 
     var allplaceName = d.data;
@@ -52,7 +52,7 @@ export class SearchComponent implements OnInit {
 
       })
 
-      alert("this is filtered"+JSON.stringify(this.filteredpackages))
+      // alert("this is filtered"+JSON.stringify(this.filteredpackages))
 
     })
 

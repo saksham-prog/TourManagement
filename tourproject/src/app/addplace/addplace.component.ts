@@ -46,7 +46,7 @@ this.banner= e.target.files[0];
           formdata.append('sliderImages', this.sliderImages[i], this.sliderImages[i]['name']);
         }
         this.ds.addPlace(formdata).subscribe((d)=>{
-          alert(JSON.stringify(d));
+          // alert(JSON.stringify(d));
         })
 
     }

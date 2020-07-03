@@ -198,12 +198,12 @@ app.post('/getAlldata', bodyParser.json(), (req, res) => {
 
 
 })
-app.post('/getAlldatas', bodyParser.json(), (req, res) => {
+app.get('/getAlldatas', (req, res) => {
     console.log(req.body)
     var collection = connection.db(dbName).collection('form');
 
     console.log(req.body)
-    collection.find({}).toArray((err, docs) => {
+    collection.find().toArray((err, docs) => {
         console.log("docs found");
         console.log(docs);
         if (!err && docs.length > 0) {
