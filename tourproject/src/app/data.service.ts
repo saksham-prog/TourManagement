@@ -8,75 +8,76 @@ export class DataService {
   getMyCurrentLocation;
   getUsers;
 
+  baseURL="http://localhost:3000/"
   constructor(private http:HttpClient) { }
 
 
-  getPosts():any
-  {
+  // getPosts():any
+  // {
 
-     return this.http.get('https://jsonplaceholder.typicode.com/posts');
+  //    return this.http.get('https://jsonplaceholder.typicode.com/posts');
      
-  }
+  // }
 
   fetchPlaces():any
   {
-    return this.http.get('http://localhost:3000/getAllplaces')
+    return this.http.get(this.baseURL+'getAllplaces')
   }
   fetchPackages():any
   {
-    return this.http.get('http://localhost:3000/getAllpackages')
+    return this.http.get(this.baseURL+'getAllpackages')
   }
 
   fetchData(d):any
   {
-    return this.http.post('http://localhost:3000/getAlldata',d)
+    return this.http.post(this.baseURL+'getAlldata',d)
   }
   fetchDatas():any
   {
-    return this.http.get('http://localhost:3000/getAlldatas')
+    return this.http.get(this.baseURL+'getAlldatas')
   }
   fetchplaces():any
   {
-    return this.http.get('http://localhost:3000/getplaces')
+    return this.http.get(this.baseURL+'getplaces')
   }
   fetchpackages():any
   {
-    return this.http.get('http://localhost:3000/getpackages')
+    return this.http.get(this.baseURL+'getpackages')
   }
   fetchuser():any
   {
-    return this.http.get('http://localhost:3000/getuser')
+    return this.http.get(this.baseURL+'getuser')
   }
   fetchenquiry():any
   {
-    return this.http.get('http://localhost:3000/getenquiry')
+    return this.http.get(this.baseURL+'getenquiry')
   }
   signUp(d):any
   {
-    return this.http.post('http://localhost:3000/sign-up', d);
+    return this.http.post(this.baseURL+'sign-up', d);
   }
 
 
   signIn(d):any
   {
-    return this.http.post('http://localhost:3000/sign-in', d);
+    return this.http.post(this.baseURL+'sign-in', d);
   }
   
   submit(d):any
   {
-    return this.http.post('http://localhost:3000/submit', d);
+    return this.http.post(this.baseURL+'submit', d);
   }
   add(d):any
   {
-    return this.http.post('http://localhost:3000/add', d);
+    return this.http.post(this.baseURL+'add', d);
   }
   packages(d):any
   {
-    return this.http.post('http://localhost:3000/packages', d);
+    return this.http.post(this.baseURL+'packages', d);
   }
   addPlace(d):any
   {
-    return this.http.post('http://localhost:3000/addPlace', d);
+    return this.http.post(this.baseURL+'addPlace', d);
   }
 
 
