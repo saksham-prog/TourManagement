@@ -10,6 +10,9 @@ const binary = require('binary');
 const path = require('path');
 
 
+
+
+
 var storage = multer.diskStorage({
     destination: function(req, file, cb) {
         console.log("in destination");
@@ -110,20 +113,22 @@ const app = express();
 
 app.use(cors());
 app.use(express.static(path.join(__dirname, 'uploads')));
+app.use(express.static(path.join(__dirname, 'tourproject')));
 
 
 app.get('/', (req, res) => {
 
-    res.send({ status: "ok", data: "this is a test api" });
+    res.sendFile('index.html');
 })
 
 
 
 
-app.get('/user', (req, res) => {
-    var id = req.query.id;
-    res.send({ status: "ok", data: [{ name: "X", age: 78, id: id }, { name: "Y", age: 67 }] });
-})
+// app.get('/', (req, res) => {
+//     res.sendFile('index.html');
+// })
+
+
 
 
 app.post('/sign-in', bodyParser.json(), (req, res) => {
@@ -425,4 +430,4 @@ app.post('/packages', bodyParser.json(), (req, res) => {
 
 
 
-app.listen(3000, () => { console.log("server is listining on port 3000") })
+app.listen(80, () => { console.log("server is listining on port 80") })

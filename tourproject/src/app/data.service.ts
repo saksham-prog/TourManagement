@@ -8,7 +8,8 @@ export class DataService {
   getMyCurrentLocation;
   getUsers;
 
-  baseURL="http://localhost:3000/"
+  // baseURL="http://localhost:3000/";
+  baseURL="http://3.22.209.219/"
   constructor(private http:HttpClient) { }
 
 
